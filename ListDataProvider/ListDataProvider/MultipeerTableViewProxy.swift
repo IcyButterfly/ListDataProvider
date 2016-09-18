@@ -56,6 +56,7 @@ class MultipeerTableViewProxy : NSObject , UITableViewDataSource, UITableViewDel
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        let item = self.dataProvider.dataAt(indexPath)
+        return item.didSelectIndexPath(indexPath)
     }
 }

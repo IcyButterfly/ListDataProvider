@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import ReactiveCocoa
-
 
 class TableCellModel: NSObject {
     

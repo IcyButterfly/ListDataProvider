@@ -12,8 +12,6 @@
 		45099E1D1D7ADD8800899CBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45099E1B1D7ADD8800899CBF /* Main.storyboard */; };
 		45099E1F1D7ADD8800899CBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45099E1E1D7ADD8800899CBF /* Assets.xcassets */; };
 		45099E221D7ADD8800899CBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45099E201D7ADD8800899CBF /* LaunchScreen.storyboard */; };
-		45CC9A201D81B6BE009B8CC0 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45CC9A1E1D81B6BE009B8CC0 /* ReactiveCocoa.framework */; };
-		45CC9A211D81B6BE009B8CC0 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45CC9A1F1D81B6BE009B8CC0 /* Result.framework */; };
 		A4FE60F2E8B6E8399C3BF9EF /* Pods_ListDataProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D041A5E0AFC00386F7BC5206 /* Pods_ListDataProvider.framework */; };
 		D4FE132F1D8E535F00CD286D /* CollectionViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE13251D8E535F00CD286D /* CollectionViewProxy.swift */; };
 		D4FE13301D8E535F00CD286D /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE13261D8E535F00CD286D /* DataContainer.swift */; };
@@ -57,8 +55,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45CC9A201D81B6BE009B8CC0 /* ReactiveCocoa.framework in Frameworks */,
-				45CC9A211D81B6BE009B8CC0 /* Result.framework in Frameworks */,
 				A4FE60F2E8B6E8399C3BF9EF /* Pods_ListDataProvider.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,7 +143,6 @@
 				45099E121D7ADD8800899CBF /* Resources */,
 				9C51412A996EC860BA9864E4 /* Embed Pods Frameworks */,
 				7C8EB62A0D92FA113D5DE661 /* Copy Pods Resources */,
-				45CC9A221D81B70E009B8CC0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -206,21 +201,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		45CC9A221D81B70E009B8CC0 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
 		7C8EB62A0D92FA113D5DE661 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
