@@ -14,9 +14,31 @@ protocol TableViewCellIdentifierDelegate {
     func identifierForCellAt(indexPath: NSIndexPath) -> String
 }
 
+/**
+ a list with single styled cell
+ identifier could be more than one
+ 
+ ---
+ this class is designed for scene:
+ cell height is dynamic , and just need didSelectRowAtIndexPath func 
+ 
+ when @param cacheHeight is false
+ tableView.rowHeight will be returned
+ 
+ when didSelectRowAtIndexPath is called selectAction will be executed
+ 
+ ----
+ when delegateForward is UITableViewDelegate
+ 
+ when delegateForward implement following will do noting
+ tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath)
+ func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+ 
+ ----
+ */
 public class TableViewProxy<DataProvider: ListDataProvider, Cell:UITableViewCell where  Cell: ReusableViewBinder, DataProvider.Data == Cell.ViewModel>: DelegateProxy , UITableViewDataSource, UITableViewDelegate{
     
-    public typealias ItemSelect = ((data: DataProvider.Data, indexPath: NSIndexPath) -> Void)
+    public typealias ItemSelect = ((DataProvider.Data, NSIndexPath) -> Void)
     
     private var dataProvider: DataProvider
     private var identifier: String
@@ -74,11 +96,16 @@ public class TableViewProxy<DataProvider: ListDataProvider, Cell:UITableViewCell
     public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if let select = self.selectAction {
             let data = self.dataProvider.dataAt(indexPath)
-            select(data: data, indexPath: indexPath)
+            select(data, indexPath)
         }
     }
     
-    // MARK: -
+    // MARK: - register cell
+    /**
+     automatic register Cell with self.identifier 
+     the default identifier is "cell"
+     */
+    
     public func manageCellOf(tableView: UITableView){
         tableView.queueIn(Cell.self, identifier: self.identifier)
     }
