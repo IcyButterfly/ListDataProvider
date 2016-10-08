@@ -8,58 +8,56 @@
 
 import UIKit
 
-class TableCellModel: NSObject {
-    
+
+struct ListEntity {
+    var title: String
+    var `class`: AnyClass
 }
 
-class TableCell: UITableViewCell, ReusableViewBinder {
-    func bindWith(_: TableCellModel) {
-        
+class ListCell: UITableViewCell , ReusableViewBinder{
+    func bindWith(_ d: ListEntity) {
+        self.textLabel?.text = d.title
     }
 }
 
-class TableViewProvider: NSObject, ListDataProvider, ArrayContainer {
+class ViewController: BaseTableViewController, ListDataProvider, ArrayContainer{
     
-    var items: [TableCellModel] = []
+    var items: [ListEntity] = []
     
-}
-
-
-class ViewControlleraa: UIViewController {
-    
-    deinit{
-        print("view controller deinit")
-    }
-
-    let tableView = UITableView()
-
-    let dataProvider = TableViewProvider()
-    var proxy : TableViewProxy<TableViewProvider, TableCell>!
+    var proxy: TableViewProxy<ViewController, ListCell>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.proxy =  TableViewProxy
-//        
-//        proxy.manage(self.tableView)
+        let classString = NSStringFromClass(TestViewController.self)
+        let classString = NSStringFromClass(TestViewController.classForCoder())
+        let vcClass = NSClassFromString(classString) as! UIViewController.Type
+        let viewController = vcClass.init()
         
+        
+        self.items.append(ListEntity(title: "list with a type cell", class: SingleCellViewController.self))
+        self.items.append(ListEntity(title: "list with a type cell, section a row", class: SingleCellViewController.self))
+        
+        self.items.append(ListEntity(title: "list with sections", class: SectionedTableViewController.self))
+        
+        self.items.append(ListEntity(title: "list with multiple cells", class: MultipeerTableViewController.self))
+        
+        self.proxy = TableViewProxy<ViewController, ListCell>(listDataProvider: self)
+        self.tableView.dataSource = self.proxy
+        self.tableView.delegate   = self.proxy
+        
+        self.proxy.manageCellOf(self.tableView)
+        self.proxy.setSelectAction { (entity, indexPath) in
+            let vcType = entity.`class` as? UIViewController.Type
+            if let vcType = vcType{
+                let vc = vcType.init()
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
     }
 
 }
 
-
-
-class ViewController: UIViewController{
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let viewc = ViewControlleraa()
-        print(viewc.view)
-        
-        
-//        self.view.addSubview(viewc.view)
-//        self.addChildViewController(viewc)
-//
-//        let viewc1 = ViewControlleraa()
-//        print(viewc1.view)
-    }
+class TestViewController: UIViewController {
+    
 }

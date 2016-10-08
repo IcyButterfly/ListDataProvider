@@ -13,6 +13,10 @@
 		45099E1F1D7ADD8800899CBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45099E1E1D7ADD8800899CBF /* Assets.xcassets */; };
 		45099E221D7ADD8800899CBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45099E201D7ADD8800899CBF /* LaunchScreen.storyboard */; };
 		A4FE60F2E8B6E8399C3BF9EF /* Pods_ListDataProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D041A5E0AFC00386F7BC5206 /* Pods_ListDataProvider.framework */; };
+		D466FDBA1DA8A2BC00185B6B /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D466FDB91DA8A2BC00185B6B /* BaseTableViewController.swift */; };
+		D466FDBC1DA8A32700185B6B /* SingleCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D466FDBB1DA8A32700185B6B /* SingleCellViewController.swift */; };
+		D466FDBE1DA8A40F00185B6B /* SectionedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D466FDBD1DA8A40F00185B6B /* SectionedTableViewController.swift */; };
+		D466FDC01DA8C46200185B6B /* MultipeerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D466FDBF1DA8C46200185B6B /* MultipeerTableViewController.swift */; };
 		D4FE132F1D8E535F00CD286D /* CollectionViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE13251D8E535F00CD286D /* CollectionViewProxy.swift */; };
 		D4FE13301D8E535F00CD286D /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE13261D8E535F00CD286D /* DataContainer.swift */; };
 		D4FE13311D8E535F00CD286D /* DelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE13271D8E535F00CD286D /* DelegateProxy.swift */; };
@@ -38,6 +42,10 @@
 		45CC9A1E1D81B6BE009B8CC0 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		45CC9A1F1D81B6BE009B8CC0 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		D041A5E0AFC00386F7BC5206 /* Pods_ListDataProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ListDataProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D466FDB91DA8A2BC00185B6B /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		D466FDBB1DA8A32700185B6B /* SingleCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleCellViewController.swift; sourceTree = "<group>"; };
+		D466FDBD1DA8A40F00185B6B /* SectionedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionedTableViewController.swift; sourceTree = "<group>"; };
+		D466FDBF1DA8C46200185B6B /* MultipeerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerTableViewController.swift; sourceTree = "<group>"; };
 		D4FE13251D8E535F00CD286D /* CollectionViewProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewProxy.swift; sourceTree = "<group>"; };
 		D4FE13261D8E535F00CD286D /* DataContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
 		D4FE13271D8E535F00CD286D /* DelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateProxy.swift; sourceTree = "<group>"; };
@@ -95,6 +103,10 @@
 			children = (
 				45099E171D7ADD8800899CBF /* AppDelegate.swift */,
 				45099E191D7ADD8800899CBF /* ViewController.swift */,
+				D466FDB91DA8A2BC00185B6B /* BaseTableViewController.swift */,
+				D466FDBB1DA8A32700185B6B /* SingleCellViewController.swift */,
+				D466FDBD1DA8A40F00185B6B /* SectionedTableViewController.swift */,
+				D466FDBF1DA8C46200185B6B /* MultipeerTableViewController.swift */,
 				D4FE13241D8E535F00CD286D /* ListDataProvider */,
 				D4FE132E1D8E535F00CD286D /* TableListDataProvider.swift */,
 				45099E1B1D7ADD8800899CBF /* Main.storyboard */,
@@ -255,15 +267,19 @@
 			files = (
 				D4FE13331D8E535F00CD286D /* MultipeerTableViewProxy.swift in Sources */,
 				D4FE13321D8E535F00CD286D /* ListDataProvider.swift in Sources */,
+				D466FDBA1DA8A2BC00185B6B /* BaseTableViewController.swift in Sources */,
 				D4FE13361D8E535F00CD286D /* TableViewProxy.swift in Sources */,
 				D4FE13311D8E535F00CD286D /* DelegateProxy.swift in Sources */,
 				45099E1A1D7ADD8800899CBF /* ViewController.swift in Sources */,
 				D4FE13371D8E535F00CD286D /* UITableView+queueCell.swift in Sources */,
+				D466FDC01DA8C46200185B6B /* MultipeerTableViewController.swift in Sources */,
 				D4FE132F1D8E535F00CD286D /* CollectionViewProxy.swift in Sources */,
 				D4FE13381D8E535F00CD286D /* TableListDataProvider.swift in Sources */,
+				D466FDBE1DA8A40F00185B6B /* SectionedTableViewController.swift in Sources */,
 				D4FE13351D8E535F00CD286D /* ReusableViewBuilder.swift in Sources */,
 				D4FE13341D8E535F00CD286D /* ReusableViewBinder.swift in Sources */,
 				45099E181D7ADD8800899CBF /* AppDelegate.swift in Sources */,
+				D466FDBC1DA8A32700185B6B /* SingleCellViewController.swift in Sources */,
 				D4FE13301D8E535F00CD286D /* DataContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

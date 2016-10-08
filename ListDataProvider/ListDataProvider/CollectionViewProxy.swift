@@ -14,7 +14,7 @@ import UIKit
  a implement of UICollectionViewDataSource
  default cell identifier is String(Cell)
  */
-class CollectionViewProxy<DataProvider: ListDataProvider, Cell:UICollectionViewCell where  Cell: ReusableViewBinder, DataProvider.Data == Cell.ViewModel>: NSObject , UICollectionViewDataSource{
+class CollectionViewProxy<DataProvider: ListDataProvider, Cell:UICollectionViewCell where  Cell: ReusableViewBinder, DataProvider.Data == Cell.ViewModel>: DelegateProxy , UICollectionViewDataSource{
     
     private var dataProvider: DataProvider
     private var identifier: String

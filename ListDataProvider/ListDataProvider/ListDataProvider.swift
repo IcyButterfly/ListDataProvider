@@ -94,9 +94,12 @@ extension PagedListDataProvider where Self: ArrayContainer{
      - parameter count: 每页个数
      - parameter more:  是否是加载更多
      */
-    public func pageIndex(withPageCount count: Int, more: Bool) -> Int{
+    public func pageIndex(withPageCount count: Int, more: Bool, defaultStartIndex: Int = 1) -> Int{
+        if more == false{
+            return defaultStartIndex
+        }
         let total = self.items.count
-        return Int( ceil( Double(total) / Double(count))) + 1
+        return Int( ceil( Double(total) / Double(count))) + defaultStartIndex
     }
 }
 
@@ -111,9 +114,12 @@ extension PagedListDataProvider where Self: SectionedSingleItemContainer{
      - parameter count: 每页个数
      - parameter more:  是否是加载更多
      */
-    public func pageIndex(withPageCount count: Int, more: Bool) -> Int{
+    public func pageIndex(withPageCount count: Int, more: Bool, defaultStartIndex: Int = 1) -> Int{
+        if more == false{
+            return defaultStartIndex
+        }
         let total = self.items.count
-        return Int( ceil( Double(total) / Double(count))) + 1
+        return Int( ceil( Double(total) / Double(count))) + defaultStartIndex
     }
 }
 
