@@ -13,18 +13,18 @@ public class DelegateProxy : NSObject{
     
     public weak var delegateForward: AnyObject?
     
-    override public func respondsToSelector(aSelector: Selector) -> Bool {
+    override public func responds(to aSelector: Selector) -> Bool {
         
-        if self.delegateForward?.respondsToSelector(aSelector) == true{
+        if self.delegateForward?.responds(to: aSelector) == true{
             return true
         }
-        return super.respondsToSelector(aSelector)
+        return super.responds(to: aSelector)
     }
     
-    override public func forwardingTargetForSelector(aSelector: Selector) -> AnyObject? {
-        if self.delegateForward?.respondsToSelector(aSelector) == true{
+    public override func forwardingTarget(for aSelector: Selector!) -> Any? {
+        if self.delegateForward?.responds(to: aSelector) == true{
             return self.delegateForward
         }
-        return super.forwardingTargetForSelector(aSelector)
+        return super.forwardingTarget(for: aSelector)
     }
 }

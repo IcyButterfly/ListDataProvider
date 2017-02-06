@@ -17,16 +17,15 @@
 		D466FDBC1DA8A32700185B6B /* SingleCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D466FDBB1DA8A32700185B6B /* SingleCellViewController.swift */; };
 		D466FDBE1DA8A40F00185B6B /* SectionedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D466FDBD1DA8A40F00185B6B /* SectionedTableViewController.swift */; };
 		D466FDC01DA8C46200185B6B /* MultipeerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D466FDBF1DA8C46200185B6B /* MultipeerTableViewController.swift */; };
-		D4FE132F1D8E535F00CD286D /* CollectionViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE13251D8E535F00CD286D /* CollectionViewProxy.swift */; };
-		D4FE13301D8E535F00CD286D /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE13261D8E535F00CD286D /* DataContainer.swift */; };
-		D4FE13311D8E535F00CD286D /* DelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE13271D8E535F00CD286D /* DelegateProxy.swift */; };
-		D4FE13321D8E535F00CD286D /* ListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE13281D8E535F00CD286D /* ListDataProvider.swift */; };
-		D4FE13331D8E535F00CD286D /* MultipeerTableViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE13291D8E535F00CD286D /* MultipeerTableViewProxy.swift */; };
-		D4FE13341D8E535F00CD286D /* ReusableViewBinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE132A1D8E535F00CD286D /* ReusableViewBinder.swift */; };
-		D4FE13351D8E535F00CD286D /* ReusableViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE132B1D8E535F00CD286D /* ReusableViewBuilder.swift */; };
-		D4FE13361D8E535F00CD286D /* TableViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE132C1D8E535F00CD286D /* TableViewProxy.swift */; };
-		D4FE13371D8E535F00CD286D /* UITableView+queueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE132D1D8E535F00CD286D /* UITableView+queueCell.swift */; };
-		D4FE13381D8E535F00CD286D /* TableListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FE132E1D8E535F00CD286D /* TableListDataProvider.swift */; };
+		D476F2091E486F44006F6C48 /* CollectionViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476F2001E486F44006F6C48 /* CollectionViewProxy.swift */; };
+		D476F20A1E486F44006F6C48 /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476F2011E486F44006F6C48 /* DataContainer.swift */; };
+		D476F20B1E486F44006F6C48 /* DelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476F2021E486F44006F6C48 /* DelegateProxy.swift */; };
+		D476F20C1E486F44006F6C48 /* ListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476F2031E486F44006F6C48 /* ListDataProvider.swift */; };
+		D476F20D1E486F44006F6C48 /* ListCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476F2041E486F44006F6C48 /* ListCellData.swift */; };
+		D476F20E1E486F44006F6C48 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476F2051E486F44006F6C48 /* ReusableView.swift */; };
+		D476F20F1E486F44006F6C48 /* TableViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476F2061E486F44006F6C48 /* TableViewProxy.swift */; };
+		D476F2101E486F44006F6C48 /* MultipeerTableViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476F2071E486F44006F6C48 /* MultipeerTableViewProxy.swift */; };
+		D476F2111E486F44006F6C48 /* UITableView+BIDequeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476F2081E486F44006F6C48 /* UITableView+BIDequeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,16 +45,15 @@
 		D466FDBB1DA8A32700185B6B /* SingleCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleCellViewController.swift; sourceTree = "<group>"; };
 		D466FDBD1DA8A40F00185B6B /* SectionedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionedTableViewController.swift; sourceTree = "<group>"; };
 		D466FDBF1DA8C46200185B6B /* MultipeerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerTableViewController.swift; sourceTree = "<group>"; };
-		D4FE13251D8E535F00CD286D /* CollectionViewProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewProxy.swift; sourceTree = "<group>"; };
-		D4FE13261D8E535F00CD286D /* DataContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
-		D4FE13271D8E535F00CD286D /* DelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateProxy.swift; sourceTree = "<group>"; };
-		D4FE13281D8E535F00CD286D /* ListDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDataProvider.swift; sourceTree = "<group>"; };
-		D4FE13291D8E535F00CD286D /* MultipeerTableViewProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerTableViewProxy.swift; sourceTree = "<group>"; };
-		D4FE132A1D8E535F00CD286D /* ReusableViewBinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableViewBinder.swift; sourceTree = "<group>"; };
-		D4FE132B1D8E535F00CD286D /* ReusableViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableViewBuilder.swift; sourceTree = "<group>"; };
-		D4FE132C1D8E535F00CD286D /* TableViewProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewProxy.swift; sourceTree = "<group>"; };
-		D4FE132D1D8E535F00CD286D /* UITableView+queueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+queueCell.swift"; sourceTree = "<group>"; };
-		D4FE132E1D8E535F00CD286D /* TableListDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableListDataProvider.swift; sourceTree = "<group>"; };
+		D476F2001E486F44006F6C48 /* CollectionViewProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewProxy.swift; sourceTree = "<group>"; };
+		D476F2011E486F44006F6C48 /* DataContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
+		D476F2021E486F44006F6C48 /* DelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateProxy.swift; sourceTree = "<group>"; };
+		D476F2031E486F44006F6C48 /* ListDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDataProvider.swift; sourceTree = "<group>"; };
+		D476F2041E486F44006F6C48 /* ListCellData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCellData.swift; sourceTree = "<group>"; };
+		D476F2051E486F44006F6C48 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		D476F2061E486F44006F6C48 /* TableViewProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewProxy.swift; sourceTree = "<group>"; };
+		D476F2071E486F44006F6C48 /* MultipeerTableViewProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerTableViewProxy.swift; sourceTree = "<group>"; };
+		D476F2081E486F44006F6C48 /* UITableView+BIDequeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+BIDequeCell.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +106,6 @@
 				D466FDBD1DA8A40F00185B6B /* SectionedTableViewController.swift */,
 				D466FDBF1DA8C46200185B6B /* MultipeerTableViewController.swift */,
 				D4FE13241D8E535F00CD286D /* ListDataProvider */,
-				D4FE132E1D8E535F00CD286D /* TableListDataProvider.swift */,
 				45099E1B1D7ADD8800899CBF /* Main.storyboard */,
 				45099E1E1D7ADD8800899CBF /* Assets.xcassets */,
 				45099E201D7ADD8800899CBF /* LaunchScreen.storyboard */,
@@ -120,15 +117,15 @@
 		D4FE13241D8E535F00CD286D /* ListDataProvider */ = {
 			isa = PBXGroup;
 			children = (
-				D4FE13251D8E535F00CD286D /* CollectionViewProxy.swift */,
-				D4FE13261D8E535F00CD286D /* DataContainer.swift */,
-				D4FE13271D8E535F00CD286D /* DelegateProxy.swift */,
-				D4FE13281D8E535F00CD286D /* ListDataProvider.swift */,
-				D4FE13291D8E535F00CD286D /* MultipeerTableViewProxy.swift */,
-				D4FE132A1D8E535F00CD286D /* ReusableViewBinder.swift */,
-				D4FE132B1D8E535F00CD286D /* ReusableViewBuilder.swift */,
-				D4FE132C1D8E535F00CD286D /* TableViewProxy.swift */,
-				D4FE132D1D8E535F00CD286D /* UITableView+queueCell.swift */,
+				D476F2001E486F44006F6C48 /* CollectionViewProxy.swift */,
+				D476F2011E486F44006F6C48 /* DataContainer.swift */,
+				D476F2021E486F44006F6C48 /* DelegateProxy.swift */,
+				D476F2031E486F44006F6C48 /* ListDataProvider.swift */,
+				D476F2041E486F44006F6C48 /* ListCellData.swift */,
+				D476F2051E486F44006F6C48 /* ReusableView.swift */,
+				D476F2061E486F44006F6C48 /* TableViewProxy.swift */,
+				D476F2071E486F44006F6C48 /* MultipeerTableViewProxy.swift */,
+				D476F2081E486F44006F6C48 /* UITableView+BIDequeCell.swift */,
 			);
 			path = ListDataProvider;
 			sourceTree = "<group>";
@@ -265,22 +262,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4FE13331D8E535F00CD286D /* MultipeerTableViewProxy.swift in Sources */,
-				D4FE13321D8E535F00CD286D /* ListDataProvider.swift in Sources */,
+				D476F2101E486F44006F6C48 /* MultipeerTableViewProxy.swift in Sources */,
 				D466FDBA1DA8A2BC00185B6B /* BaseTableViewController.swift in Sources */,
-				D4FE13361D8E535F00CD286D /* TableViewProxy.swift in Sources */,
-				D4FE13311D8E535F00CD286D /* DelegateProxy.swift in Sources */,
+				D476F20F1E486F44006F6C48 /* TableViewProxy.swift in Sources */,
 				45099E1A1D7ADD8800899CBF /* ViewController.swift in Sources */,
-				D4FE13371D8E535F00CD286D /* UITableView+queueCell.swift in Sources */,
+				D476F2111E486F44006F6C48 /* UITableView+BIDequeCell.swift in Sources */,
+				D476F20C1E486F44006F6C48 /* ListDataProvider.swift in Sources */,
+				D476F20E1E486F44006F6C48 /* ReusableView.swift in Sources */,
+				D476F2091E486F44006F6C48 /* CollectionViewProxy.swift in Sources */,
+				D476F20A1E486F44006F6C48 /* DataContainer.swift in Sources */,
 				D466FDC01DA8C46200185B6B /* MultipeerTableViewController.swift in Sources */,
-				D4FE132F1D8E535F00CD286D /* CollectionViewProxy.swift in Sources */,
-				D4FE13381D8E535F00CD286D /* TableListDataProvider.swift in Sources */,
+				D476F20B1E486F44006F6C48 /* DelegateProxy.swift in Sources */,
 				D466FDBE1DA8A40F00185B6B /* SectionedTableViewController.swift in Sources */,
-				D4FE13351D8E535F00CD286D /* ReusableViewBuilder.swift in Sources */,
-				D4FE13341D8E535F00CD286D /* ReusableViewBinder.swift in Sources */,
+				D476F20D1E486F44006F6C48 /* ListCellData.swift in Sources */,
 				45099E181D7ADD8800899CBF /* AppDelegate.swift in Sources */,
 				D466FDBC1DA8A32700185B6B /* SingleCellViewController.swift in Sources */,
-				D4FE13301D8E535F00CD286D /* DataContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

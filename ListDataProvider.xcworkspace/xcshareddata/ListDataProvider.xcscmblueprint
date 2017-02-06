@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B8ABFA0616CFBC3A9F450962CA7081986DDE563E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B8ABFA0616CFBC3A9F450962CA7081986DDE563E" : 9223372036854775807,
+    "FAFEF355647C0046669203118865F1E425458C80" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5967D05C-46A8-41C2-AD27-9252C7B012A4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B8ABFA0616CFBC3A9F450962CA7081986DDE563E" : "ListDataProvider\/",
+    "FAFEF355647C0046669203118865F1E425458C80" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ListDataProvider",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ListDataProvider.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/IcyButterfly\/ListDataProvider.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B8ABFA0616CFBC3A9F450962CA7081986DDE563E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "172.16.0.132:UOKOMobile\/WorkOrderSystem.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FAFEF355647C0046669203118865F1E425458C80"
+    }
+  ]
+}

@@ -28,6 +28,43 @@ public protocol EntityContainer {
     var entity: Data { get set }
 }
 
+extension ArrayContainer {
+    
+    public mutating func append(newElement: Data){
+        self.items.append(newElement)
+    }
+    
+    public mutating func append(contentOf: [Data]){
+        self.items.append(contentsOf: contentOf)
+    }
+    
+    public mutating func append(contentsOf: [Data], more: Bool) {
+        if more == false {
+            self.items.removeAll()
+        }
+        self.items.append(contentsOf: contentsOf)
+    }
+}
+
+extension SectionedSingleItemContainer {
+    
+    public mutating func append(newElement: Data){
+        self.items.append(newElement)
+    }
+    
+    public mutating func append(contentOf: [Data]){
+        self.items.append(contentsOf: contentOf)
+    }
+    
+    public mutating func append(contentsOf: [Data], more: Bool) {
+        if more == false {
+            self.items.removeAll()
+        }
+        self.items.append(contentsOf: contentsOf)
+    }
+}
+
+
 
 
 // MARK: -
@@ -59,54 +96,5 @@ public class ListSectionedArrayProvider<T>:NSObject, SectionedArrayContainer, Li
     
     init(datas: [[T]]){
         self.items = datas
-    }
-}
-
-
-public class MultipeerArrayProvider: NSObject, ListDataProvider, ArrayContainer{
-
-    public var items: [ReusableViewInfo] = []
-    
-    //section 0
-    func append(item: ReusableViewInfo){
-        self.items.append(item)
-    }
-    
-    //section 0
-    func append(items: [ReusableViewInfo]){
-        self.items.appendContentsOf(items)
-    }
-    
-    func removeAll(){
-        self.items.removeAll()
-    }
-}
-
-public class MultipeerSectionedArrayProvider: NSObject, ListDataProvider, SectionedArrayContainer{
-    public typealias Data = ReusableViewInfo
-    public var items: [[ReusableViewInfo]] = []
-    
-    //section 0
-    func appendItem(item: ReusableViewInfo){
-        if let _ = self.items.first{
-            self.items[0].append(item)
-        }else{
-            self.items = [[item]]
-        }
-        
-    }
-    
-    //section 0
-    func appendItems(items: [ReusableViewInfo]){
-        self.items[0].appendContentsOf(items)
-    }
-    
-    //sections
-    func appendSection(items: [ReusableViewInfo]) {
-        self.items.append(items)
-    }
-    
-    func removeAll(){
-        self.items.removeAll()
     }
 }

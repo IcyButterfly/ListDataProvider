@@ -8,35 +8,29 @@
 
 import UIKit
 
-
-
-/**
- a implement of UICollectionViewDataSource
- default cell identifier is String(Cell)
- */
-class CollectionViewProxy<DataProvider: ListDataProvider, Cell:UICollectionViewCell where  Cell: ReusableViewBinder, DataProvider.Data == Cell.ViewModel>: DelegateProxy , UICollectionViewDataSource{
+class CollectionViewProxy<DataProvider: ListDataProvider, Cell:UICollectionViewCell>: NSObject , UICollectionViewDataSource where  Cell: ReusableViewBinder, DataProvider.Data == Cell.ViewModel{
     
     private var dataProvider: DataProvider
     private var identifier: String
     
-    init(identifier: String = String(Cell), listDataProvider: DataProvider){
+    init(identifier: String = String(describing: Cell.self), listDataProvider: DataProvider){
         self.identifier   = identifier
         self.dataProvider = listDataProvider
     }
     
     // MARK: - UICollectionViewDataSource
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    private func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return self.dataProvider.sectionCount()
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.dataProvider.rowCountAt(section)
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.dataProvider.rowCountAt(section: section)
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(self.identifier, forIndexPath: indexPath)
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.identifier, for: indexPath)
         let actualCell = cell as! Cell
-        actualCell.bindWith(self.dataProvider.dataAt(indexPath))
+        actualCell.bindWith(self.dataProvider.dataAt(indexPath: indexPath))
         return actualCell
     }
 }

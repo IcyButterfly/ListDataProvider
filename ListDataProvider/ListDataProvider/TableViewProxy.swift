@@ -1,3 +1,5 @@
+
+
 //
 //  TableViewProxy.swift
 //  ListDataProvider
@@ -11,34 +13,13 @@ import UITableView_FDTemplateLayoutCell
 
 
 protocol TableViewCellIdentifierDelegate {
-    func identifierForCellAt(indexPath: NSIndexPath) -> String
+    func identifierForCellAt(indexPath: IndexPath) -> String
 }
 
-/**
- a list with single styled cell
- identifier could be more than one
- 
- ---
- this class is designed for scene:
- cell height is dynamic , and just need didSelectRowAtIndexPath func 
- 
- when @param cacheHeight is false
- tableView.rowHeight will be returned
- 
- when didSelectRowAtIndexPath is called selectAction will be executed
- 
- ----
- when delegateForward is UITableViewDelegate
- 
- when delegateForward implement following will do noting
- tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath)
- func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
- 
- ----
- */
-public class TableViewProxy<DataProvider: ListDataProvider, Cell:UITableViewCell where  Cell: ReusableViewBinder, DataProvider.Data == Cell.ViewModel>: DelegateProxy , UITableViewDataSource, UITableViewDelegate{
+public class TableViewProxy<DataProvider: ListDataProvider, Cell:UITableViewCell>: DelegateProxy , UITableViewDataSource, UITableViewDelegate
+where  Cell: ReusableViewBinder, DataProvider.CellViewModel == Cell.ViewModel, DataProvider: ListCellViewModelProvider{
     
-    public typealias ItemSelect = ((DataProvider.Data, NSIndexPath) -> Void)
+    public typealias ItemSelect = ((DataProvider.Data, IndexPath) -> Void)
     
     private var dataProvider: DataProvider
     private var identifier: String
@@ -57,56 +38,52 @@ public class TableViewProxy<DataProvider: ListDataProvider, Cell:UITableViewCell
         self.dataProvider = listDataProvider
     }
     
-    public func setSelectAction(action: ItemSelect){
+    public func setSelectAction(action: @escaping ItemSelect){
         self.selectAction = action
     }
 
     // MARK: - UITableViewDataSource
-    public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    public func numberOfSections(in tableView: UITableView) -> Int {
         return self.dataProvider.sectionCount()
     }
+
     
-    public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.dataProvider.rowCountAt(section)
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.dataProvider.rowCountAt(section: section)
     }
     
-    public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cellIdentifier = self.identifier
         if let identifierDelegate = self.cellIdentifierDelegate {
-            cellIdentifier = identifierDelegate.identifierForCellAt(indexPath)
+            cellIdentifier = identifierDelegate.identifierForCellAt(indexPath: indexPath)
         }
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! Cell
-        cell.bindWith(self.dataProvider.dataAt(indexPath))
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! Cell
+        cell.bindWith(self.dataProvider.viewModelAt(indexPath: indexPath))
         
         return cell
     }
     
     
     // MARK: - UITableViewDelegate
-    public func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if self.cacheHeight {
-            return tableView.fd_heightForCellWithIdentifier(self.identifier, configuration: { (cellAnyObject) in
+            return tableView.fd_heightForCell(withIdentifier: self.identifier, configuration: { (cellAnyObject) in
                 let cell = cellAnyObject as! Cell
-                cell.bindWith(self.dataProvider.dataAt(indexPath))
+                cell.bindWith(self.dataProvider.viewModelAt(indexPath: indexPath))
             })
         }
         return tableView.rowHeight
     }
     
-    public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let select = self.selectAction {
-            let data = self.dataProvider.dataAt(indexPath)
+            let data = self.dataProvider.dataAt(indexPath: indexPath)
             select(data, indexPath)
         }
     }
     
-    // MARK: - register cell
-    /**
-     automatic register Cell with self.identifier 
-     the default identifier is "cell"
-     */
-    
+    // MARK: -
     public func manageCellOf(tableView: UITableView){
-        tableView.queueIn(Cell.self, identifier: self.identifier)
+        tableView.queueIn(cell: Cell.self, identifier: self.identifier)
     }
 }

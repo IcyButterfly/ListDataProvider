@@ -8,6 +8,18 @@
 
 import Foundation
 
+public protocol ListCellViewModelProvider{
+    associatedtype CellViewModel: ListCellViewModel
+    func viewModelAt(indexPath: IndexPath) -> CellViewModel
+}
+
+extension ListCellViewModelProvider where Self: ListDataProvider, Data == CellViewModel.E{
+    
+    func viewModelAt(indexPath: IndexPath) -> CellViewModel {
+        let item = self.dataAt(indexPath: indexPath)
+        return CellViewModel(entity: item as! CellViewModel.E)
+    }
+}
 
 public protocol ListDataProvider {
     
@@ -15,9 +27,10 @@ public protocol ListDataProvider {
     
     func sectionCount() -> Int
     func rowCountAt(section: Int) -> Int
-    func dataAt(indexPath: NSIndexPath) -> Data
+    func dataAt(indexPath: IndexPath) -> Data
 
 }
+
 
 extension ListDataProvider where Self: ArrayContainer{
     
@@ -29,7 +42,7 @@ extension ListDataProvider where Self: ArrayContainer{
         return self.items.count
     }
     
-    public func dataAt(indexPath: NSIndexPath) -> Data{
+    public func dataAt(indexPath: IndexPath) -> Data{
         return self.items[indexPath.row]
     }
 }
@@ -45,7 +58,7 @@ extension ListDataProvider where Self: SectionedArrayContainer{
         return self.items[section].count
     }
     
-    public func dataAt(indexPath: NSIndexPath) -> Data{
+    public func dataAt(indexPath: IndexPath) -> Data{
         return self.items[indexPath.section][indexPath.row]
     }
 }
@@ -60,13 +73,13 @@ extension ListDataProvider where Self: SectionedSingleItemContainer{
         return 1
     }
     
-    public func dataAt(indexPath: NSIndexPath) -> Data{
+    public func dataAt(indexPath: IndexPath) -> Data{
         return self.items[indexPath.section]
     }
 }
 
 extension ListDataProvider where Self: EntityContainer{
-    func dataAt(indexPath: NSIndexPath) -> Data{
+    func dataAt(indexPath: IndexPath) -> Data{
         return self.entity
     }
 }
