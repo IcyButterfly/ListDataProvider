@@ -8,16 +8,27 @@
 
 import UIKit
 
+public protocol TableCellData{
+    
+    var identifier: String { get }
+    var cellHeight: CGFloat? { get }
+    
+    func build(tableCell: UITableViewCell, at indexPath: IndexPath)
+    func select(indexPath: IndexPath)
+    
+}
+
+
 public class ListCellData<Cell>: NSObject {
     
     typealias CellConfiguration = ((Cell, IndexPath) -> Void)
     typealias CellSelection     = ((IndexPath) -> Void)
-    typealias CellHeight        = ((IndexPath) -> Float)
+    typealias CellHeight        = (() -> CGFloat)
     
-    let identifier: String?
-    let configuration: CellConfiguration?
-    let select: CellSelection?
-    let height: CellHeight?
+    public let identifier: String
+    fileprivate let configuration: CellConfiguration?
+    fileprivate let select: CellSelection?
+    fileprivate let height: CellHeight?
     
     init(identifier: String = String(describing: Cell.self),
          configuration: CellConfiguration? = nil,
@@ -28,5 +39,21 @@ public class ListCellData<Cell>: NSObject {
         self.configuration = configuration
         self.select = selection
         self.height = height
+    }
+    
+    public var cellHeight: CGFloat? {
+        return self.height?()
+    }
+}
+
+extension ListCellData: TableCellData {
+    
+    public func build(tableCell: UITableViewCell, at indexPath: IndexPath) {
+        let cell = tableCell as! Cell
+        configuration?(cell, indexPath)
+    }
+    
+    public func select(indexPath: IndexPath) {
+        select?(indexPath)
     }
 }
