@@ -97,6 +97,7 @@ public protocol PagedListDataProvider: ListDataProvider {
 
 
 extension PagedListDataProvider where Self: ArrayContainer{
+    
     public func isEmpty() -> Bool {
         return self.items.count == 0
     }
@@ -114,9 +115,25 @@ extension PagedListDataProvider where Self: ArrayContainer{
         let total = self.items.count
         return Int( ceil( Double(total) / Double(count))) + defaultStartIndex
     }
+    
+    
+    public mutating func append(contentsOf: [Data], more: Bool, pageCount: Int) {
+        if more == false {
+            self.items.removeAll()
+        }
+        self.items.append(contentsOf: contentsOf)
+        
+        if contentsOf.count < pageCount {
+            self.hasMore = false
+        }else{
+            self.hasMore = true
+        }
+    }
+    
 }
 
 extension PagedListDataProvider where Self: SectionedSingleItemContainer{
+    
     public func isEmpty() -> Bool {
         return self.items.count == 0
     }
@@ -133,6 +150,19 @@ extension PagedListDataProvider where Self: SectionedSingleItemContainer{
         }
         let total = self.items.count
         return Int( ceil( Double(total) / Double(count))) + defaultStartIndex
+    }
+    
+    public mutating func append(contentsOf: [Data], more: Bool, pageCount: Int) {
+        if more == false {
+            self.items.removeAll()
+        }
+        self.items.append(contentsOf: contentsOf)
+        
+        if contentsOf.count < pageCount {
+            self.hasMore = false
+        }else{
+            self.hasMore = true
+        }
     }
 }
 
