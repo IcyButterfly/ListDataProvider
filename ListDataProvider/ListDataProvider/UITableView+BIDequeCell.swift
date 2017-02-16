@@ -10,6 +10,7 @@ import UIKit
 
 extension UITableView{
     
+    // in
     func queueIn(cell: AnyClass){
         self.queueIn(cell: cell, identifier: String(describing: cell))
     }
@@ -25,6 +26,7 @@ extension UITableView{
         }
     }
     
+    // out
     func queueOutCell<T>(identifier: String) -> T{
         return self.dequeueReusableCell(withIdentifier: identifier) as! T
     }
