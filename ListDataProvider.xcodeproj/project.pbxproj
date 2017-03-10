@@ -12,7 +12,10 @@
 		45099E1D1D7ADD8800899CBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45099E1B1D7ADD8800899CBF /* Main.storyboard */; };
 		45099E1F1D7ADD8800899CBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45099E1E1D7ADD8800899CBF /* Assets.xcassets */; };
 		45099E221D7ADD8800899CBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45099E201D7ADD8800899CBF /* LaunchScreen.storyboard */; };
-		A4FE60F2E8B6E8399C3BF9EF /* Pods_ListDataProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D041A5E0AFC00386F7BC5206 /* Pods_ListDataProvider.framework */; };
+		C87366961295B090E1379D10 /* Pods_ListDataProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD4CE68D679A78E095863D2A /* Pods_ListDataProvider.framework */; };
+		D40DE8271E72B53E00E2A64D /* PagedListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40DE8241E72B53E00E2A64D /* PagedListDataProvider.swift */; };
+		D40DE8281E72B53E00E2A64D /* SectionedArrayContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40DE8251E72B53E00E2A64D /* SectionedArrayContainer.swift */; };
+		D40DE8291E72B53E00E2A64D /* UICollectionVIew+BIDequeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40DE8261E72B53E00E2A64D /* UICollectionVIew+BIDequeCell.swift */; };
 		D466FDBA1DA8A2BC00185B6B /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D466FDB91DA8A2BC00185B6B /* BaseTableViewController.swift */; };
 		D466FDBC1DA8A32700185B6B /* SingleCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D466FDBB1DA8A32700185B6B /* SingleCellViewController.swift */; };
 		D466FDBE1DA8A40F00185B6B /* SectionedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D466FDBD1DA8A40F00185B6B /* SectionedTableViewController.swift */; };
@@ -29,8 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3D95760FAD11A4ABFD9463E7 /* Pods-ListDataProvider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListDataProvider.release.xcconfig"; path = "Pods/Target Support Files/Pods-ListDataProvider/Pods-ListDataProvider.release.xcconfig"; sourceTree = "<group>"; };
-		401B14BBA8804C2F912277E6 /* Pods-ListDataProvider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListDataProvider.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ListDataProvider/Pods-ListDataProvider.debug.xcconfig"; sourceTree = "<group>"; };
+		0277C69CB8E369E92C612B74 /* Pods-ListDataProvider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListDataProvider.release.xcconfig"; path = "Pods/Target Support Files/Pods-ListDataProvider/Pods-ListDataProvider.release.xcconfig"; sourceTree = "<group>"; };
 		45099E141D7ADD8800899CBF /* ListDataProvider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListDataProvider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45099E171D7ADD8800899CBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45099E191D7ADD8800899CBF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +42,10 @@
 		45099E231D7ADD8800899CBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45CC9A1E1D81B6BE009B8CC0 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		45CC9A1F1D81B6BE009B8CC0 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
-		D041A5E0AFC00386F7BC5206 /* Pods_ListDataProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ListDataProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		71B748755092B400316A4B8E /* Pods-ListDataProvider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListDataProvider.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ListDataProvider/Pods-ListDataProvider.debug.xcconfig"; sourceTree = "<group>"; };
+		D40DE8241E72B53E00E2A64D /* PagedListDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagedListDataProvider.swift; sourceTree = "<group>"; };
+		D40DE8251E72B53E00E2A64D /* SectionedArrayContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionedArrayContainer.swift; sourceTree = "<group>"; };
+		D40DE8261E72B53E00E2A64D /* UICollectionVIew+BIDequeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionVIew+BIDequeCell.swift"; sourceTree = "<group>"; };
 		D466FDB91DA8A2BC00185B6B /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		D466FDBB1DA8A32700185B6B /* SingleCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleCellViewController.swift; sourceTree = "<group>"; };
 		D466FDBD1DA8A40F00185B6B /* SectionedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionedTableViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +59,7 @@
 		D476F2061E486F44006F6C48 /* TableViewProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewProxy.swift; sourceTree = "<group>"; };
 		D476F2071E486F44006F6C48 /* MultipeerTableViewProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerTableViewProxy.swift; sourceTree = "<group>"; };
 		D476F2081E486F44006F6C48 /* UITableView+BIDequeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+BIDequeCell.swift"; sourceTree = "<group>"; };
+		DD4CE68D679A78E095863D2A /* Pods_ListDataProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ListDataProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4FE60F2E8B6E8399C3BF9EF /* Pods_ListDataProvider.framework in Frameworks */,
+				C87366961295B090E1379D10 /* Pods_ListDataProvider.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,7 +79,7 @@
 			children = (
 				45CC9A1E1D81B6BE009B8CC0 /* ReactiveCocoa.framework */,
 				45CC9A1F1D81B6BE009B8CC0 /* Result.framework */,
-				D041A5E0AFC00386F7BC5206 /* Pods_ListDataProvider.framework */,
+				DD4CE68D679A78E095863D2A /* Pods_ListDataProvider.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -83,8 +89,8 @@
 			children = (
 				45099E161D7ADD8800899CBF /* ListDataProvider */,
 				45099E151D7ADD8800899CBF /* Products */,
-				FEEB4A7B6096644991A30481 /* Pods */,
 				05D3280A0CBC92D921F0F560 /* Frameworks */,
+				C5B1C17175B94DF85F7F2B57 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,29 +120,32 @@
 			path = ListDataProvider;
 			sourceTree = "<group>";
 		};
+		C5B1C17175B94DF85F7F2B57 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				71B748755092B400316A4B8E /* Pods-ListDataProvider.debug.xcconfig */,
+				0277C69CB8E369E92C612B74 /* Pods-ListDataProvider.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D4FE13241D8E535F00CD286D /* ListDataProvider */ = {
 			isa = PBXGroup;
 			children = (
-				D476F2001E486F44006F6C48 /* CollectionViewProxy.swift */,
-				D476F2011E486F44006F6C48 /* DataContainer.swift */,
-				D476F2021E486F44006F6C48 /* DelegateProxy.swift */,
 				D476F2031E486F44006F6C48 /* ListDataProvider.swift */,
 				D476F2041E486F44006F6C48 /* ListCellData.swift */,
+				D40DE8241E72B53E00E2A64D /* PagedListDataProvider.swift */,
+				D40DE8251E72B53E00E2A64D /* SectionedArrayContainer.swift */,
+				D476F2011E486F44006F6C48 /* DataContainer.swift */,
 				D476F2051E486F44006F6C48 /* ReusableView.swift */,
+				D476F2021E486F44006F6C48 /* DelegateProxy.swift */,
+				D476F2001E486F44006F6C48 /* CollectionViewProxy.swift */,
 				D476F2061E486F44006F6C48 /* TableViewProxy.swift */,
 				D476F2071E486F44006F6C48 /* MultipeerTableViewProxy.swift */,
+				D40DE8261E72B53E00E2A64D /* UICollectionVIew+BIDequeCell.swift */,
 				D476F2081E486F44006F6C48 /* UITableView+BIDequeCell.swift */,
 			);
 			path = ListDataProvider;
-			sourceTree = "<group>";
-		};
-		FEEB4A7B6096644991A30481 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				401B14BBA8804C2F912277E6 /* Pods-ListDataProvider.debug.xcconfig */,
-				3D95760FAD11A4ABFD9463E7 /* Pods-ListDataProvider.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,12 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45099E261D7ADD8800899CBF /* Build configuration list for PBXNativeTarget "ListDataProvider" */;
 			buildPhases = (
-				AD94761E89CAB12775EFB7B9 /* Check Pods Manifest.lock */,
+				CDD2E572F65794732DADF3DB /* [CP] Check Pods Manifest.lock */,
 				45099E101D7ADD8800899CBF /* Sources */,
 				45099E111D7ADD8800899CBF /* Frameworks */,
 				45099E121D7ADD8800899CBF /* Resources */,
-				9C51412A996EC860BA9864E4 /* Embed Pods Frameworks */,
-				7C8EB62A0D92FA113D5DE661 /* Copy Pods Resources */,
+				53BF084F6008C168D7571301 /* [CP] Embed Pods Frameworks */,
+				DEF8F91D7F727017160A3CE2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -210,29 +219,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7C8EB62A0D92FA113D5DE661 /* Copy Pods Resources */ = {
+		53BF084F6008C168D7571301 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ListDataProvider/Pods-ListDataProvider-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9C51412A996EC860BA9864E4 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,19 +234,34 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ListDataProvider/Pods-ListDataProvider-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AD94761E89CAB12775EFB7B9 /* Check Pods Manifest.lock */ = {
+		CDD2E572F65794732DADF3DB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DEF8F91D7F727017160A3CE2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ListDataProvider/Pods-ListDataProvider-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -270,6 +279,8 @@
 				D476F20C1E486F44006F6C48 /* ListDataProvider.swift in Sources */,
 				D476F20E1E486F44006F6C48 /* ReusableView.swift in Sources */,
 				D476F2091E486F44006F6C48 /* CollectionViewProxy.swift in Sources */,
+				D40DE8291E72B53E00E2A64D /* UICollectionVIew+BIDequeCell.swift in Sources */,
+				D40DE8271E72B53E00E2A64D /* PagedListDataProvider.swift in Sources */,
 				D476F20A1E486F44006F6C48 /* DataContainer.swift in Sources */,
 				D466FDC01DA8C46200185B6B /* MultipeerTableViewController.swift in Sources */,
 				D476F20B1E486F44006F6C48 /* DelegateProxy.swift in Sources */,
@@ -277,6 +288,7 @@
 				D476F20D1E486F44006F6C48 /* ListCellData.swift in Sources */,
 				45099E181D7ADD8800899CBF /* AppDelegate.swift in Sources */,
 				D466FDBC1DA8A32700185B6B /* SingleCellViewController.swift in Sources */,
+				D40DE8281E72B53E00E2A64D /* SectionedArrayContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,7 +401,7 @@
 		};
 		45099E271D7ADD8800899CBF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 401B14BBA8804C2F912277E6 /* Pods-ListDataProvider.debug.xcconfig */;
+			baseConfigurationReference = 71B748755092B400316A4B8E /* Pods-ListDataProvider.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -400,13 +412,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Bl.ListDataProvider;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
 		};
 		45099E281D7ADD8800899CBF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D95760FAD11A4ABFD9463E7 /* Pods-ListDataProvider.release.xcconfig */;
+			baseConfigurationReference = 0277C69CB8E369E92C612B74 /* Pods-ListDataProvider.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -417,7 +429,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Bl.ListDataProvider;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Release;
 		};

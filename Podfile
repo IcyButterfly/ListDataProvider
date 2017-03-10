@@ -4,6 +4,6 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'ListDataProvider' do
-pod 'UITableView+FDTemplateLayoutCell'
+#pod 'UITableView+FDTemplateLayoutCell'
 end
 

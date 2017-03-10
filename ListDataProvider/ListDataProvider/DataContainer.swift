@@ -13,21 +13,6 @@ public protocol ArrayContainer {
     var items: [Data] { get set }
 }
 
-public protocol SectionedArrayContainer {
-    associatedtype Data
-    var items: [[Data]] { get set }
-}
-
-public protocol SectionedSingleItemContainer {
-    associatedtype Data
-    var items: [Data] { get set }
-}
-
-public protocol EntityContainer {
-    associatedtype Data
-    var entity: Data { get set }
-}
-
 extension ArrayContainer {
     
     public mutating func append(newElement: Data){
@@ -46,27 +31,9 @@ extension ArrayContainer {
     }
 }
 
-extension SectionedSingleItemContainer {
-    
-    public mutating func append(newElement: Data){
-        self.items.append(newElement)
-    }
-    
-    public mutating func append(contentOf: [Data]){
-        self.items.append(contentsOf: contentOf)
-    }
-    
-    public mutating func append(contentsOf: [Data], more: Bool) {
-        if more == false {
-            self.items.removeAll()
-        }
-        self.items.append(contentsOf: contentsOf)
-    }
-}
 
 
-
-
+/*
 // MARK: -
 public class ListArrayProvider<T>:NSObject, ArrayContainer, ListDataProvider{
     public var items: [T] = []
@@ -98,3 +65,4 @@ public class ListSectionedArrayProvider<T>:NSObject, SectionedArrayContainer, Li
         self.items = datas
     }
 }
+*/

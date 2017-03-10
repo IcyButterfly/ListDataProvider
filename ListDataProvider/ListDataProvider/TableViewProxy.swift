@@ -9,9 +9,9 @@
 //
 
 import UIKit
-import UITableView_FDTemplateLayoutCell
+//import UITableView_FDTemplateLayoutCell
 
-
+/*
 protocol TableViewCellIdentifierDelegate {
     func identifierForCellAt(indexPath: IndexPath) -> String
 }
@@ -87,3 +87,4 @@ where  Cell: ReusableViewBinder, DataProvider.CellViewModel == Cell.ViewModel, D
         tableView.queueIn(cell: Cell.self, identifier: self.identifier)
     }
 }
+*/

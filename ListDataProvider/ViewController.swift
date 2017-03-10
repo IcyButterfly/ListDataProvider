@@ -20,6 +20,8 @@ class ListCell: UITableViewCell , ReusableViewBinder{
     }
 }
 
+
+/*
 class ViewController: BaseTableViewController, ListDataProvider, ArrayContainer{
     
     var items: [ListEntity] = []
@@ -61,3 +63,4 @@ class ViewController: BaseTableViewController, ListDataProvider, ArrayContainer{
 class TestViewController: UIViewController {
     
 }
+*/
