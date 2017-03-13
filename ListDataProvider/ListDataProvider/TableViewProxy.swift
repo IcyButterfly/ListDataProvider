@@ -9,14 +9,13 @@
 //
 
 import UIKit
-//import UITableView_FDTemplateLayoutCell
 
-/*
+
 protocol TableViewCellIdentifierDelegate {
     func identifierForCellAt(indexPath: IndexPath) -> String
 }
 
-public class TableViewProxy<DataProvider: ListDataProvider, Cell:UITableViewCell>: DelegateProxy , UITableViewDataSource, UITableViewDelegate
+public class TableViewProxy<DataProvider: ListDataProvider, Cell:UITableViewCell>: NSObject , UITableViewDataSource, UITableViewDelegate
 where  Cell: ReusableViewBinder, DataProvider.CellViewModel == Cell.ViewModel, DataProvider: ListCellViewModelProvider{
     
     public typealias ItemSelect = ((DataProvider.Data, IndexPath) -> Void)
@@ -63,16 +62,9 @@ where  Cell: ReusableViewBinder, DataProvider.CellViewModel == Cell.ViewModel, D
         return cell
     }
     
-    
     // MARK: - UITableViewDelegate
-    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if self.cacheHeight {
-            return tableView.fd_heightForCell(withIdentifier: self.identifier, configuration: { (cellAnyObject) in
-                let cell = cellAnyObject as! Cell
-                cell.bindWith(self.dataProvider.viewModelAt(indexPath: indexPath))
-            })
-        }
-        return tableView.rowHeight
+    public func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return tableView.estimatedRowHeight
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -87,4 +79,4 @@ where  Cell: ReusableViewBinder, DataProvider.CellViewModel == Cell.ViewModel, D
         tableView.queueIn(cell: Cell.self, identifier: self.identifier)
     }
 }
-*/
+

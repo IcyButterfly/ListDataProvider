@@ -21,14 +21,14 @@
 		D466FDBE1DA8A40F00185B6B /* SectionedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D466FDBD1DA8A40F00185B6B /* SectionedTableViewController.swift */; };
 		D466FDC01DA8C46200185B6B /* MultipeerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D466FDBF1DA8C46200185B6B /* MultipeerTableViewController.swift */; };
 		D476F2091E486F44006F6C48 /* CollectionViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476F2001E486F44006F6C48 /* CollectionViewProxy.swift */; };
-		D476F20A1E486F44006F6C48 /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476F2011E486F44006F6C48 /* DataContainer.swift */; };
-		D476F20B1E486F44006F6C48 /* DelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476F2021E486F44006F6C48 /* DelegateProxy.swift */; };
 		D476F20C1E486F44006F6C48 /* ListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476F2031E486F44006F6C48 /* ListDataProvider.swift */; };
 		D476F20D1E486F44006F6C48 /* ListCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476F2041E486F44006F6C48 /* ListCellData.swift */; };
 		D476F20E1E486F44006F6C48 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476F2051E486F44006F6C48 /* ReusableView.swift */; };
 		D476F20F1E486F44006F6C48 /* TableViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476F2061E486F44006F6C48 /* TableViewProxy.swift */; };
 		D476F2101E486F44006F6C48 /* MultipeerTableViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476F2071E486F44006F6C48 /* MultipeerTableViewProxy.swift */; };
 		D476F2111E486F44006F6C48 /* UITableView+BIDequeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476F2081E486F44006F6C48 /* UITableView+BIDequeCell.swift */; };
+		D49F10661E76A2DC00578FE8 /* ListCellModelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49F10651E76A2DC00578FE8 /* ListCellModelProvider.swift */; };
+		D49F10681E76A32900578FE8 /* ArrayContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49F10671E76A32900578FE8 /* ArrayContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,14 +51,14 @@
 		D466FDBD1DA8A40F00185B6B /* SectionedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionedTableViewController.swift; sourceTree = "<group>"; };
 		D466FDBF1DA8C46200185B6B /* MultipeerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerTableViewController.swift; sourceTree = "<group>"; };
 		D476F2001E486F44006F6C48 /* CollectionViewProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewProxy.swift; sourceTree = "<group>"; };
-		D476F2011E486F44006F6C48 /* DataContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
-		D476F2021E486F44006F6C48 /* DelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateProxy.swift; sourceTree = "<group>"; };
 		D476F2031E486F44006F6C48 /* ListDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDataProvider.swift; sourceTree = "<group>"; };
 		D476F2041E486F44006F6C48 /* ListCellData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCellData.swift; sourceTree = "<group>"; };
 		D476F2051E486F44006F6C48 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		D476F2061E486F44006F6C48 /* TableViewProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewProxy.swift; sourceTree = "<group>"; };
 		D476F2071E486F44006F6C48 /* MultipeerTableViewProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerTableViewProxy.swift; sourceTree = "<group>"; };
 		D476F2081E486F44006F6C48 /* UITableView+BIDequeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+BIDequeCell.swift"; sourceTree = "<group>"; };
+		D49F10651E76A2DC00578FE8 /* ListCellModelProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCellModelProvider.swift; sourceTree = "<group>"; };
+		D49F10671E76A32900578FE8 /* ArrayContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayContainer.swift; sourceTree = "<group>"; };
 		DD4CE68D679A78E095863D2A /* Pods_ListDataProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ListDataProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -129,19 +129,43 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		D4FE13241D8E535F00CD286D /* ListDataProvider */ = {
+		D49F10691E76A3C300578FE8 /* ListProxy */ = {
 			isa = PBXGroup;
 			children = (
-				D476F2031E486F44006F6C48 /* ListDataProvider.swift */,
-				D476F2041E486F44006F6C48 /* ListCellData.swift */,
-				D40DE8241E72B53E00E2A64D /* PagedListDataProvider.swift */,
-				D40DE8251E72B53E00E2A64D /* SectionedArrayContainer.swift */,
-				D476F2011E486F44006F6C48 /* DataContainer.swift */,
-				D476F2051E486F44006F6C48 /* ReusableView.swift */,
-				D476F2021E486F44006F6C48 /* DelegateProxy.swift */,
 				D476F2001E486F44006F6C48 /* CollectionViewProxy.swift */,
 				D476F2061E486F44006F6C48 /* TableViewProxy.swift */,
 				D476F2071E486F44006F6C48 /* MultipeerTableViewProxy.swift */,
+			);
+			name = ListProxy;
+			sourceTree = "<group>";
+		};
+		D49F106A1E76A3D700578FE8 /* DataContainer */ = {
+			isa = PBXGroup;
+			children = (
+				D49F10671E76A32900578FE8 /* ArrayContainer.swift */,
+				D40DE8251E72B53E00E2A64D /* SectionedArrayContainer.swift */,
+				D476F2041E486F44006F6C48 /* ListCellData.swift */,
+			);
+			name = DataContainer;
+			sourceTree = "<group>";
+		};
+		D49F106B1E76A3DE00578FE8 /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				D476F2031E486F44006F6C48 /* ListDataProvider.swift */,
+				D49F10651E76A2DC00578FE8 /* ListCellModelProvider.swift */,
+				D40DE8241E72B53E00E2A64D /* PagedListDataProvider.swift */,
+			);
+			name = DataProvider;
+			sourceTree = "<group>";
+		};
+		D4FE13241D8E535F00CD286D /* ListDataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				D49F106B1E76A3DE00578FE8 /* DataProvider */,
+				D49F106A1E76A3D700578FE8 /* DataContainer */,
+				D49F10691E76A3C300578FE8 /* ListProxy */,
+				D476F2051E486F44006F6C48 /* ReusableView.swift */,
 				D40DE8261E72B53E00E2A64D /* UICollectionVIew+BIDequeCell.swift */,
 				D476F2081E486F44006F6C48 /* UITableView+BIDequeCell.swift */,
 			);
@@ -178,7 +202,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Ice Butterfly";
 				TargetAttributes = {
 					45099E131D7ADD8800899CBF = {
@@ -279,11 +303,11 @@
 				D476F20C1E486F44006F6C48 /* ListDataProvider.swift in Sources */,
 				D476F20E1E486F44006F6C48 /* ReusableView.swift in Sources */,
 				D476F2091E486F44006F6C48 /* CollectionViewProxy.swift in Sources */,
+				D49F10681E76A32900578FE8 /* ArrayContainer.swift in Sources */,
 				D40DE8291E72B53E00E2A64D /* UICollectionVIew+BIDequeCell.swift in Sources */,
 				D40DE8271E72B53E00E2A64D /* PagedListDataProvider.swift in Sources */,
-				D476F20A1E486F44006F6C48 /* DataContainer.swift in Sources */,
 				D466FDC01DA8C46200185B6B /* MultipeerTableViewController.swift in Sources */,
-				D476F20B1E486F44006F6C48 /* DelegateProxy.swift in Sources */,
+				D49F10661E76A2DC00578FE8 /* ListCellModelProvider.swift in Sources */,
 				D466FDBE1DA8A40F00185B6B /* SectionedTableViewController.swift in Sources */,
 				D476F20D1E486F44006F6C48 /* ListCellData.swift in Sources */,
 				45099E181D7ADD8800899CBF /* AppDelegate.swift in Sources */,
@@ -328,8 +352,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -374,8 +400,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -394,6 +422,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};

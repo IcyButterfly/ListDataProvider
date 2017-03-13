@@ -9,27 +9,7 @@
 import Foundation
 
 
-public protocol ListCellViewModel {
-    associatedtype E
-    var entity: E { get }
-    init(entity: E)
-}
-
-
-public protocol ListCellViewModelProvider{
-    associatedtype CellViewModel: ListCellViewModel
-    func viewModelAt(indexPath: IndexPath) -> CellViewModel
-}
-
-extension ListCellViewModelProvider where Self: ListDataProvider, Data == CellViewModel.E{
-    
-    func viewModelAt(indexPath: IndexPath) -> CellViewModel {
-        let item = self.dataAt(indexPath: indexPath)
-        return CellViewModel(entity: item as! CellViewModel.E)
-    }
-}
-
-public protocol ListDataProvider {
+public protocol ListDataProvider: class {
     
     associatedtype Data
     

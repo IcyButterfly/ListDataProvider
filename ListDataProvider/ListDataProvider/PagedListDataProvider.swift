@@ -19,25 +19,37 @@ extension PagedListDataProvider where Self: ArrayContainer{
     public func isEmpty() -> Bool {
         return self.items.count == 0
     }
+
+    /// 计算页码
+    ///
+    /// - Parameters:
+    ///   - count: 每页个数
+    ///   - more:  是否是加载更多
+    ///   - startIndex: 起始页码的数量 默认值为1
+    /// - Returns: more true:  加载更多的页数
+    ///                 false: 刷新时的页数
     
-    /**
-     计算页码
-     
-     - parameter count: 每页个数
-     - parameter more:  是否是加载更多
-     */
-    public func pageIndex(withPageCount count: Int, more: Bool, defaultStartIndex: Int = 1) -> Int{
+    public func pageIndex(withPageCount count: Int, isRequestMore more: Bool, startIndex: Int = 1) -> Int{
         if more == false{
-            return defaultStartIndex
+            return startIndex
         }
         let total = self.items.count
-        return Int( ceil( Double(total) / Double(count))) + defaultStartIndex
+        return Int( ceil( Double(total) / Double(count))) + startIndex
     }
     
-    public mutating func append(contentsOf: [Data], more: Bool, pageCount: Int) {
+    
+    /// 通过接口返回的数据的数量判断是否还有更多
+    ///
+    /// eg: pageCount为10
+    ///     contentsOf的count为1  则可以判断没有更多了
+    ///     contentsOf的count为10 则可能是还有更多 也可能是没有更多了，此时 本方法判断结果为还有更多
+    ///                          此时如果服务器并未给出是否还有更多的字段，则可以通过再获取一页来判断,直到获取到的数量小于10 就没有更多了
+    public func append(contentsOf: [Data], isRequestMore more: Bool, pageCount: Int) {
+        
         if more == false {
             self.items.removeAll()
         }
+        
         self.items.append(contentsOf: contentsOf)
         
         if contentsOf.count < pageCount {
@@ -45,5 +57,13 @@ extension PagedListDataProvider where Self: ArrayContainer{
         }else{
             self.hasMore = true
         }
+    }
+    
+    public func append(contentsOf: [Data], isRequestMore more: Bool, hasMore: Bool) {
+        if more == false {
+            self.items.removeAll()
+        }
+        self.items.append(contentsOf: contentsOf)
+        self.hasMore = hasMore
     }
 }

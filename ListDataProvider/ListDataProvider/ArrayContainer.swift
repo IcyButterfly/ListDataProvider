@@ -2,31 +2,31 @@
 //  ArrayContainer.swift
 //  ListDataProvider
 //
-//  Created by ET|冰琳 on 2017/3/10.
-//  Copyright © 2017年 UK. All rights reserved.
+//  Created by 郑林琴 on 16/9/1.
+//  Copyright © 2016年 Ice Butterfly. All rights reserved.
 //
 
 import UIKit
 
-protocol Singled { }
-protocol Sectioned { }
+public protocol Singled { }
+public protocol Sectioned { }
 
-public protocol ArrayContainer {
+public protocol ArrayContainer: class {
     associatedtype Data
     var items: [Data] { get set }
 }
 
 extension ArrayContainer {
     
-    public mutating func append(newElement: Data){
+    public func append(newElement: Data){
         self.items.append(newElement)
     }
     
-    public mutating func append(contentOf: [Data]){
+    public func append(contentOf: [Data]){
         self.items.append(contentsOf: contentOf)
     }
     
-    public mutating func append(contentsOf: [Data], more: Bool) {
+    public func append(contentsOf: [Data], more: Bool) {
         if more == false {
             self.items.removeAll()
         }
@@ -34,7 +34,7 @@ extension ArrayContainer {
     }
 }
 
-extension ArrayContainer where Self: ListDataProvider, Self: Singled {
+public extension ArrayContainer where Self: ListDataProvider, Self: Singled {
     public func sectionCount() -> Int{
         return self.items.count > 0 ? 1 : 0
     }
