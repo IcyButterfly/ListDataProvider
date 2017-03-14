@@ -59,6 +59,11 @@ extension PagedListDataProvider where Self: ArrayContainer{
         }
     }
     
+    
+    /// 接口有返回的是否还有更多
+    ///
+    /// - Parameters:
+    ///   - hasMore: API返回的是否还有更多
     public func append(contentsOf: [Data], isRequestMore more: Bool, hasMore: Bool) {
         if more == false {
             self.items.removeAll()

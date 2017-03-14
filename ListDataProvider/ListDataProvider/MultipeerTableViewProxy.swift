@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MultipeerTableViewProxy<T: ListDataProvider>: NSObject where T.Data == TableCellData {
+class MultipeerTableViewProxy<T: ListDataProvider>: NSObject, UITableViewDataSource, UITableViewDelegate where T.Data == TableCellData {
     
     let dataProvider: T
     
@@ -30,4 +30,12 @@ class MultipeerTableViewProxy<T: ListDataProvider>: NSObject where T.Data == Tab
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.dataProvider.rowCountAt(section: section)
     }
+    
+    // MARK: - UITableViewDelegate
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let data = self.dataProvider.dataAt(indexPath: indexPath)
+        data.select(indexPath: indexPath)
+    }
+    
 }

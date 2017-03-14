@@ -34,7 +34,7 @@ extension ArrayContainer {
     }
 }
 
-public extension ArrayContainer where Self: ListDataProvider, Self: Singled {
+public extension ArrayContainer where Self: ListDataProvider{
     public func sectionCount() -> Int{
         return self.items.count > 0 ? 1 : 0
     }

@@ -10,16 +10,17 @@ import UIKit
 
 class SingleCellViewController: BaseTableViewController {
 
+//    var tableProxy: TableViewProxy<SingleCellViewModel, UITableViewCell>!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+//        self.tableProxy = TableViewProxy
     }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+class SingleCellViewModel: NSObject, ListDataProvider, ArrayContainer {
+    var items: [String] = []
 }
 
 
