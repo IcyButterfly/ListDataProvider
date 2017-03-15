@@ -8,14 +8,14 @@
 
 import UIKit
 
-extension UICollectionView {
+extension UICollectionView: ListView {
     
     // in
-    func queueIn(cell: AnyClass) {
+    public func queueIn(cell: AnyClass) {
         self.queueIn(cell: cell, identifier: String(describing: cell))
     }
     
-    func queueIn(cell: AnyClass, identifier: String) {
+    public func queueIn(cell: AnyClass, identifier: String) {
         
         let cellString = String(describing: cell)
         
@@ -26,13 +26,12 @@ extension UICollectionView {
         }
     }
     
-    
     // out
-    func queueOutCell<T>(identifier: String, for indexPath: IndexPath) -> T{
+    public func queueOutCell<T>(identifier: String, for indexPath: IndexPath) -> T{
         return self.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! T
     }
     
-    func queueOutCell<T: UICollectionViewCell>(for indexPath: IndexPath) -> T{
+    public func queueOutCell<T: ReusableView>(for indexPath: IndexPath) -> T{
         return self.dequeueReusableCell(withReuseIdentifier: String(describing: T.self), for: indexPath) as! T
     }
 }

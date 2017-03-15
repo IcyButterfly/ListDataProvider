@@ -13,13 +13,13 @@ public protocol TableCellData{
     var identifier: String { get }
     var cellHeight: CGFloat? { get }
     
-    func build(tableCell: UITableViewCell, at indexPath: IndexPath)
+    func build(tableCell: ReusableView, at indexPath: IndexPath)
     func select(indexPath: IndexPath)
-    
+    func registerTo(tableView: ListView) 
 }
 
 
-public class ListCellData<Cell>: NSObject {
+public class ListCellData<Cell: ReusableView>: NSObject {
     
     typealias CellConfiguration = ((Cell, IndexPath) -> Void)
     typealias CellSelection     = ((IndexPath) -> Void)
@@ -48,12 +48,16 @@ public class ListCellData<Cell>: NSObject {
 
 extension ListCellData: TableCellData {
     
-    public func build(tableCell: UITableViewCell, at indexPath: IndexPath) {
+    public func build(tableCell: ReusableView, at indexPath: IndexPath) {
         let cell = tableCell as! Cell
         configuration?(cell, indexPath)
     }
     
     public func select(indexPath: IndexPath) {
         select?(indexPath)
+    }
+    
+    public func registerTo(tableView: ListView) {
+        tableView.queueIn(cell: Cell.self, identifier: self.identifier)
     }
 }

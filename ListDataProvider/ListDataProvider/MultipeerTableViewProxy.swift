@@ -22,7 +22,7 @@ class MultipeerTableViewProxy<T: ListDataProvider>: NSObject, UITableViewDataSou
         let cell = tableView.dequeueReusableCell(withIdentifier: data.identifier)
         return cell!
     }
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return self.dataProvider.sectionCount()
     }

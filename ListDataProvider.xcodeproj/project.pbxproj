@@ -17,6 +17,15 @@
 		D40DE8271E72B53E00E2A64D /* PagedListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40DE8241E72B53E00E2A64D /* PagedListDataProvider.swift */; };
 		D40DE8281E72B53E00E2A64D /* SectionedArrayContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40DE8251E72B53E00E2A64D /* SectionedArrayContainer.swift */; };
 		D40DE8291E72B53E00E2A64D /* UICollectionVIew+BIDequeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40DE8261E72B53E00E2A64D /* UICollectionVIew+BIDequeCell.swift */; };
+		D45FBF231E7935F100A538F1 /* TextLeftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45FBF221E7935F100A538F1 /* TextLeftTableViewCell.swift */; };
+		D45FBF261E79360B00A538F1 /* TextCenterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45FBF251E79360B00A538F1 /* TextCenterTableViewCell.swift */; };
+		D45FBF281E79361A00A538F1 /* TextArrowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45FBF271E79361A00A538F1 /* TextArrowTableViewCell.swift */; };
+		D45FBF2A1E79362B00A538F1 /* ImageTextArrowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45FBF291E79362B00A538F1 /* ImageTextArrowTableViewCell.swift */; };
+		D45FBF2C1E79363A00A538F1 /* TextCheckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45FBF2B1E79363A00A538F1 /* TextCheckTableViewCell.swift */; };
+		D45FBF2E1E79364F00A538F1 /* TextInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45FBF2D1E79364F00A538F1 /* TextInputTableViewCell.swift */; };
+		D45FBF301E79365C00A538F1 /* TextPlaceholderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45FBF2F1E79365C00A538F1 /* TextPlaceholderTableViewCell.swift */; };
+		D45FBF321E79368400A538F1 /* PlainTextHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45FBF311E79368400A538F1 /* PlainTextHeaderFooterView.swift */; };
+		D45FBF341E7940CB00A538F1 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45FBF331E7940CB00A538F1 /* ListView.swift */; };
 		D466FDBA1DA8A2BC00185B6B /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D466FDB91DA8A2BC00185B6B /* BaseTableViewController.swift */; };
 		D466FDBC1DA8A32700185B6B /* SingleCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D466FDBB1DA8A32700185B6B /* SingleCellViewController.swift */; };
 		D466FDBE1DA8A40F00185B6B /* SectionedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D466FDBD1DA8A40F00185B6B /* SectionedTableViewController.swift */; };
@@ -60,6 +69,15 @@
 		D40DE8241E72B53E00E2A64D /* PagedListDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagedListDataProvider.swift; sourceTree = "<group>"; };
 		D40DE8251E72B53E00E2A64D /* SectionedArrayContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionedArrayContainer.swift; sourceTree = "<group>"; };
 		D40DE8261E72B53E00E2A64D /* UICollectionVIew+BIDequeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionVIew+BIDequeCell.swift"; sourceTree = "<group>"; };
+		D45FBF221E7935F100A538F1 /* TextLeftTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextLeftTableViewCell.swift; sourceTree = "<group>"; };
+		D45FBF251E79360B00A538F1 /* TextCenterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextCenterTableViewCell.swift; sourceTree = "<group>"; };
+		D45FBF271E79361A00A538F1 /* TextArrowTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextArrowTableViewCell.swift; sourceTree = "<group>"; };
+		D45FBF291E79362B00A538F1 /* ImageTextArrowTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTextArrowTableViewCell.swift; sourceTree = "<group>"; };
+		D45FBF2B1E79363A00A538F1 /* TextCheckTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextCheckTableViewCell.swift; sourceTree = "<group>"; };
+		D45FBF2D1E79364F00A538F1 /* TextInputTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputTableViewCell.swift; sourceTree = "<group>"; };
+		D45FBF2F1E79365C00A538F1 /* TextPlaceholderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextPlaceholderTableViewCell.swift; sourceTree = "<group>"; };
+		D45FBF311E79368400A538F1 /* PlainTextHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlainTextHeaderFooterView.swift; sourceTree = "<group>"; };
+		D45FBF331E7940CB00A538F1 /* ListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		D466FDB91DA8A2BC00185B6B /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		D466FDBB1DA8A32700185B6B /* SingleCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleCellViewController.swift; sourceTree = "<group>"; };
 		D466FDBD1DA8A40F00185B6B /* SectionedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionedTableViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +178,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D45FBF241E7935F500A538F1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D45FBF221E7935F100A538F1 /* TextLeftTableViewCell.swift */,
+				D45FBF251E79360B00A538F1 /* TextCenterTableViewCell.swift */,
+				D45FBF271E79361A00A538F1 /* TextArrowTableViewCell.swift */,
+				D45FBF2B1E79363A00A538F1 /* TextCheckTableViewCell.swift */,
+				D45FBF2D1E79364F00A538F1 /* TextInputTableViewCell.swift */,
+				D45FBF2F1E79365C00A538F1 /* TextPlaceholderTableViewCell.swift */,
+				D45FBF291E79362B00A538F1 /* ImageTextArrowTableViewCell.swift */,
+				D45FBF311E79368400A538F1 /* PlainTextHeaderFooterView.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		D49F10691E76A3C300578FE8 /* ListProxy */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,9 +238,11 @@
 				D49F106B1E76A3DE00578FE8 /* DataProvider */,
 				D49F106A1E76A3D700578FE8 /* DataContainer */,
 				D49F10691E76A3C300578FE8 /* ListProxy */,
+				D45FBF241E7935F500A538F1 /* Cell */,
 				D476F2051E486F44006F6C48 /* ReusableView.swift */,
-				D40DE8261E72B53E00E2A64D /* UICollectionVIew+BIDequeCell.swift */,
+				D45FBF331E7940CB00A538F1 /* ListView.swift */,
 				D476F2081E486F44006F6C48 /* UITableView+BIDequeCell.swift */,
+				D40DE8261E72B53E00E2A64D /* UICollectionVIew+BIDequeCell.swift */,
 			);
 			path = ListDataProvider;
 			sourceTree = "<group>";
@@ -268,7 +303,7 @@
 				TargetAttributes = {
 					45099E131D7ADD8800899CBF = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = VSXKPZWN4F;
+						DevelopmentTeam = 464E2N8XVY;
 					};
 					D4CE9CE01E77D47500A0C0DE = {
 						CreatedOnToolsVersion = 8.1;
@@ -416,20 +451,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				D476F2101E486F44006F6C48 /* MultipeerTableViewProxy.swift in Sources */,
+				D45FBF261E79360B00A538F1 /* TextCenterTableViewCell.swift in Sources */,
+				D45FBF2A1E79362B00A538F1 /* ImageTextArrowTableViewCell.swift in Sources */,
 				D466FDBA1DA8A2BC00185B6B /* BaseTableViewController.swift in Sources */,
 				45099E1A1D7ADD8800899CBF /* ViewController.swift in Sources */,
+				D45FBF2E1E79364F00A538F1 /* TextInputTableViewCell.swift in Sources */,
 				D476F2111E486F44006F6C48 /* UITableView+BIDequeCell.swift in Sources */,
+				D45FBF341E7940CB00A538F1 /* ListView.swift in Sources */,
 				D476F20C1E486F44006F6C48 /* ListDataProvider.swift in Sources */,
+				D45FBF301E79365C00A538F1 /* TextPlaceholderTableViewCell.swift in Sources */,
 				D476F20E1E486F44006F6C48 /* ReusableView.swift in Sources */,
 				D49F10681E76A32900578FE8 /* ArrayContainer.swift in Sources */,
+				D45FBF231E7935F100A538F1 /* TextLeftTableViewCell.swift in Sources */,
 				D40DE8291E72B53E00E2A64D /* UICollectionVIew+BIDequeCell.swift in Sources */,
 				D40DE8271E72B53E00E2A64D /* PagedListDataProvider.swift in Sources */,
+				D45FBF281E79361A00A538F1 /* TextArrowTableViewCell.swift in Sources */,
 				D466FDC01DA8C46200185B6B /* MultipeerTableViewController.swift in Sources */,
 				D49F10661E76A2DC00578FE8 /* ListCellModelProvider.swift in Sources */,
+				D45FBF2C1E79363A00A538F1 /* TextCheckTableViewCell.swift in Sources */,
 				D466FDBE1DA8A40F00185B6B /* SectionedTableViewController.swift in Sources */,
 				D476F20D1E486F44006F6C48 /* ListCellData.swift in Sources */,
 				45099E181D7ADD8800899CBF /* AppDelegate.swift in Sources */,
 				D466FDBC1DA8A32700185B6B /* SingleCellViewController.swift in Sources */,
+				D45FBF321E79368400A538F1 /* PlainTextHeaderFooterView.swift in Sources */,
 				D40DE8281E72B53E00E2A64D /* SectionedArrayContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -569,13 +613,14 @@
 			baseConfigurationReference = 71B748755092B400316A4B8E /* Pods-ListDataProvider.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 464E2N8XVY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = ListDataProvider/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Bl.ListDataProvider;
+				PRODUCT_BUNDLE_IDENTIFIER = Bl.ListDataProvidero;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0.1;
 			};
@@ -586,13 +631,14 @@
 			baseConfigurationReference = 0277C69CB8E369E92C612B74 /* Pods-ListDataProvider.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 464E2N8XVY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = ListDataProvider/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Bl.ListDataProvider;
+				PRODUCT_BUNDLE_IDENTIFIER = Bl.ListDataProvidero;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0.1;
 			};

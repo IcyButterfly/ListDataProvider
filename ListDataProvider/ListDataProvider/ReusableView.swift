@@ -21,7 +21,7 @@ public protocol ReusableViewBinder {
 }
 
 // MARK: - ReusableView
-public protocol ReusableView{
+public protocol ReusableView: class {
     static var identifier: String {get}
 }
 

@@ -8,14 +8,14 @@
 
 import UIKit
 
-extension UITableView{
+extension UITableView: ListView{
     
     // in
-    func queueIn(cell: AnyClass){
+    public func queueIn(cell: AnyClass){
         self.queueIn(cell: cell, identifier: String(describing: cell))
     }
     
-    func queueIn(cell: AnyClass, identifier: String){
+    public func queueIn(cell: AnyClass, identifier: String){
         
         let cellString = String(describing: cell)
         
@@ -27,12 +27,12 @@ extension UITableView{
     }
     
     // out
-    func queueOutCell<T>(identifier: String) -> T{
+    public func queueOutCell<T>(identifier: String, for indexPath: IndexPath) -> T {
         return self.dequeueReusableCell(withIdentifier: identifier) as! T
     }
     
-    func queueOutCell<T: UITableViewCell>() -> T{
+    public func queueOutCell<T: ReusableView>(for indexPath: IndexPath) -> T {
+        print(String(describing: T.self))
         return self.dequeueReusableCell(withIdentifier: String(describing: T.self)) as! T
     }
-    
 }
