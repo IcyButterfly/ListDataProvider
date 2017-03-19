@@ -47,7 +47,8 @@ class MultipeerTableViewController: BaseTableViewController, ListDataProvider, A
         
         //
         let textPlaceholder = ListCellData<TextPlaceholderTableViewCell>(configuration: { (cell, item) in
-            cell.textLabel?.text = "TextPlaceholder"
+            cell.left.text = "jaha"
+            cell.value.text = "TextPlaceholderTableViewCell"
         }, selection: nil, height: nil)
         self.items.append(textPlaceholder)
         

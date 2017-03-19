@@ -5,18 +5,16 @@
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "B8ABFA0616CFBC3A9F450962CA7081986DDE563E" : 9223372036854775807,
-    "E984C94555A5426861AF6837E194214514E64A77" : 9223372036854775807,
-    "FAFEF355647C0046669203118865F1E425458C80" : 9223372036854775807
+    "E984C94555A5426861AF6837E194214514E64A77" : 9223372036854775807
   },
-  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5967D05C-46A8-41C2-AD27-9252C7B012A4",
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "25C6E03A-1EC0-45F1-BAD3-856B1A45702D",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "B8ABFA0616CFBC3A9F450962CA7081986DDE563E" : "ListDataProvider\/",
-    "E984C94555A5426861AF6837E194214514E64A77" : "",
-    "FAFEF355647C0046669203118865F1E425458C80" : ".."
+    "E984C94555A5426861AF6837E194214514E64A77" : ""
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "ListDataProvider",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
-  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ListDataProvider.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ListDataProvider.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/IcyButterfly\/ListDataProvider.git",
@@ -27,11 +25,6 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git.oschina.net:iBinglin\/DutyManage.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E984C94555A5426861AF6837E194214514E64A77"
-    },
-    {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "172.16.0.132:UOKOMobile\/WorkOrderSystem.git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FAFEF355647C0046669203118865F1E425458C80"
     }
   ]
 }
