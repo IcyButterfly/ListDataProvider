@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImageTextArrowTableViewCell: UITableViewCell {
+class ImageTextArrowTableViewCell: LDPTableViewCell {
 
     @IBInspectable var imageLeft: CGFloat = 15
     @IBInspectable var arrowRight: CGFloat = 15
@@ -36,14 +36,8 @@ class ImageTextArrowTableViewCell: UITableViewCell {
         self.arrow.frame = arrowframe
     }
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    override func setup() {
         self.contentView.addSubview(self.arrow)
         self.imageView?.image = UIImage(named: "arrow_right")
     }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
 }

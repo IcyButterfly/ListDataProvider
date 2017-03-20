@@ -8,26 +8,19 @@
 
 import UIKit
 
-class TextArrowTableViewCell: UITableViewCell {
+class TextArrowTableViewCell: LDPTableViewCell {
     
-    var arrow: UIImageView!
+    @IBOutlet var arrow: UIImageView!
     
-    @IBInspectable var textLeft: CGFloat = 50
+    @IBInspectable var textLeft: CGFloat = 15
     @IBInspectable var arrowRight: CGFloat = 15
 
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.arrow = UIImageView(image: UIImage(named: "arrow_right"))
-        self.contentView.addSubview(self.arrow)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    override func setup() {
+        
+        if self.arrow == nil {
+            self.arrow = UIImageView(image: UIImage(named: "arrow_right"))
+            self.contentView.addSubview(self.arrow)
+        }
     }
     
     override func layoutSubviews() {

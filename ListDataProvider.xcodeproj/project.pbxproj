@@ -17,6 +17,7 @@
 		D40DE8271E72B53E00E2A64D /* PagedListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40DE8241E72B53E00E2A64D /* PagedListDataProvider.swift */; };
 		D40DE8281E72B53E00E2A64D /* SectionedArrayContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40DE8251E72B53E00E2A64D /* SectionedArrayContainer.swift */; };
 		D40DE8291E72B53E00E2A64D /* UICollectionVIew+BIDequeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40DE8261E72B53E00E2A64D /* UICollectionVIew+BIDequeCell.swift */; };
+		D439134B1E7FC72500877B6A /* LDPTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D439134A1E7FC72500877B6A /* LDPTableViewCell.swift */; };
 		D45FBF231E7935F100A538F1 /* TextLeftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45FBF221E7935F100A538F1 /* TextLeftTableViewCell.swift */; };
 		D45FBF261E79360B00A538F1 /* TextCenterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45FBF251E79360B00A538F1 /* TextCenterTableViewCell.swift */; };
 		D45FBF281E79361A00A538F1 /* TextArrowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45FBF271E79361A00A538F1 /* TextArrowTableViewCell.swift */; };
@@ -69,6 +70,7 @@
 		D40DE8241E72B53E00E2A64D /* PagedListDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagedListDataProvider.swift; sourceTree = "<group>"; };
 		D40DE8251E72B53E00E2A64D /* SectionedArrayContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionedArrayContainer.swift; sourceTree = "<group>"; };
 		D40DE8261E72B53E00E2A64D /* UICollectionVIew+BIDequeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionVIew+BIDequeCell.swift"; sourceTree = "<group>"; };
+		D439134A1E7FC72500877B6A /* LDPTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LDPTableViewCell.swift; sourceTree = "<group>"; };
 		D45FBF221E7935F100A538F1 /* TextLeftTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextLeftTableViewCell.swift; sourceTree = "<group>"; };
 		D45FBF251E79360B00A538F1 /* TextCenterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextCenterTableViewCell.swift; sourceTree = "<group>"; };
 		D45FBF271E79361A00A538F1 /* TextArrowTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextArrowTableViewCell.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				D45FBF2F1E79365C00A538F1 /* TextPlaceholderTableViewCell.swift */,
 				D45FBF291E79362B00A538F1 /* ImageTextArrowTableViewCell.swift */,
 				D45FBF311E79368400A538F1 /* PlainTextHeaderFooterView.swift */,
+				D439134A1E7FC72500877B6A /* LDPTableViewCell.swift */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				D45FBF2E1E79364F00A538F1 /* TextInputTableViewCell.swift in Sources */,
 				D476F2111E486F44006F6C48 /* UITableView+BIDequeCell.swift in Sources */,
 				D45FBF341E7940CB00A538F1 /* ListView.swift in Sources */,
+				D439134B1E7FC72500877B6A /* LDPTableViewCell.swift in Sources */,
 				D476F20C1E486F44006F6C48 /* ListDataProvider.swift in Sources */,
 				D45FBF301E79365C00A538F1 /* TextPlaceholderTableViewCell.swift in Sources */,
 				D476F20E1E486F44006F6C48 /* ReusableView.swift in Sources */,

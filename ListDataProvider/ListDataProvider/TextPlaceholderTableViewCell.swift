@@ -8,30 +8,38 @@
 
 import UIKit
 
-class TextPlaceholderTableViewCell: UITableViewCell {
+class TextPlaceholderTableViewCell: LDPTableViewCell {
     
     lazy var placeholder = UILabel()
     lazy var value = UILabel()
     lazy var left  = UILabel()
-    
+    @IBOutlet var arrow: UIImageView!
+
     @IBInspectable var leftEdge: CGFloat = 15
     @IBInspectable var rightEdge: CGFloat = 15
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    func set(value: String?) {
+        self.value.text = value
+        
+        if let v = value, v.characters.count > 0 {
+            self.placeholder.isHidden = true
+        }else{
+            self.placeholder.isHidden = false
+        }
     }
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
+    override func setup() {
         self.contentView.addSubview(self.left)
         self.contentView.addSubview(self.placeholder)
         self.contentView.addSubview(self.value)
         
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        self.value.textAlignment = .right
+        self.placeholder.textColor = UIColor.lightGray
+        
+        if self.arrow == nil {
+            self.arrow = UIImageView(image: UIImage(named: "arrow_right"))
+            self.contentView.addSubview(self.arrow)
+        }
     }
     
     override func layoutSubviews() {
@@ -42,17 +50,23 @@ class TextPlaceholderTableViewCell: UITableViewCell {
         leftFrame.origin.x = self.leftEdge
         leftFrame.origin.y = (self.frame.height - leftFrame.height)/2.0
         self.left.frame = leftFrame
+
+        var arrowFrame = arrow.frame
+        arrowFrame.origin.x = frame.width - rightEdge - arrowFrame.width
+        arrowFrame.origin.y = (frame.height - arrowFrame.height)/2.0
+        self.arrow.frame = arrowFrame
         
         self.placeholder.sizeToFit()
         var placeholderFrame = self.placeholder.frame
-        placeholderFrame.origin.x = self.frame.width - placeholderFrame.width - self.rightEdge
+        placeholderFrame.origin.x = arrowFrame.maxX - arrowFrame.width - placeholderFrame.width - 5/*placeholder-arrow*/
         placeholderFrame.origin.y = (self.frame.height - placeholderFrame.height)/2.0
         self.placeholder.frame = placeholderFrame
         
-        self.value.sizeToFit()
         var valueFrame = self.value.frame
-        valueFrame.origin.x = self.frame.width - valueFrame.width - self.rightEdge
-        valueFrame.origin.y = (self.frame.height - valueFrame.height)/2.0
+        valueFrame.origin.x = self.left.frame.maxX + self.rightEdge
+        valueFrame.origin.y = 0//(self.frame.height - valueFrame.height)/2.0
+        valueFrame.size.width = self.frame.width - self.left.frame.maxX - self.rightEdge * 2 - arrowFrame.width - 5
+        valueFrame.size.height = self.frame.height
         self.value.frame = valueFrame
         
     }

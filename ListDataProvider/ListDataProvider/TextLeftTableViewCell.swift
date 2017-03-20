@@ -8,9 +8,9 @@
 
 import UIKit
 
-class TextLeftTableViewCell: UITableViewCell {
+class TextLeftTableViewCell: LDPTableViewCell {
 
-    @IBInspectable var leftEdge: CGFloat = 10
+    @IBInspectable var leftEdge: CGFloat = 15
     
     override func layoutSubviews() {
         super.layoutSubviews()

@@ -8,20 +8,9 @@
 
 import UIKit
 
-class TextCenterTableViewCell: UITableViewCell {
+class TextCenterTableViewCell: LDPTableViewCell {
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.textLabel?.textAlignment = .center
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    override func setup() {
         self.textLabel?.textAlignment = .center
     }
 }

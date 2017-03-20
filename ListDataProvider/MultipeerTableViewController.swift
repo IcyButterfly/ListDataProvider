@@ -15,6 +15,7 @@ class MultipeerTableViewController: BaseTableViewController, ListDataProvider, A
     override func viewDidLoad() {
         super.viewDidLoad()
 
+//        self.tableView.separatorStyle = .none
         //
         let text = ListCellData<TextLeftTableViewCell>(configuration: { (cell, index) in
             cell.textLabel?.text = "TextLeft"
@@ -36,25 +37,43 @@ class MultipeerTableViewController: BaseTableViewController, ListDataProvider, A
         //
         let leftCheck = ListCellData<TextCheckTableViewCell>(configuration: { (cell, item) in
             cell.textLabel?.text = "TextCheck"
+            cell.isSelected = false
         }, selection: nil, height: nil)
         self.items.append(leftCheck)
+        
+        let leftChecked = ListCellData<TextCheckTableViewCell>(configuration: { (cell, item) in
+            cell.textLabel?.text = "TextCheck"
+            cell.isSelected = true
+        }, selection: nil, height: nil)
+        self.items.append(leftChecked)
         
         //
         let textInput = ListCellData<TextInputTableViewCell>(configuration: { (cell, item) in
             cell.textLabel?.text = "TextInput"
+            cell.inputField.placeholder = "please input"
         }, selection: nil, height: nil)
         self.items.append(textInput)
         
         //
         let textPlaceholder = ListCellData<TextPlaceholderTableViewCell>(configuration: { (cell, item) in
-            cell.left.text = "jaha"
-            cell.value.text = "TextPlaceholderTableViewCell"
+            cell.left.text = "placeholder"
+            cell.placeholder.text = "please select"
+//            cell.set(value: "placeholder")
         }, selection: nil, height: nil)
         self.items.append(textPlaceholder)
         
         //
+        let textPlaceholderValue = ListCellData<TextPlaceholderTableViewCell>(configuration: { (cell, item) in
+            cell.left.text = "placeholder"
+            cell.placeholder.text = "please select"
+            cell.set(value: "value")
+        }, selection: nil, height: nil)
+        self.items.append(textPlaceholderValue)
+        
+        //
         let imageTxtArrow = ListCellData<ImageTextArrowTableViewCell>(configuration: { (cell, item) in
             cell.textLabel?.text = "ImageTextArrow"
+            cell.separatorInset = UIEdgeInsetsMake(0, 15, 0, 0)
         }, selection: nil, height: nil)
         self.items.append(imageTxtArrow)
         
