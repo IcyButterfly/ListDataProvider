@@ -57,7 +57,7 @@ class MultipeerTableViewController: BaseTableViewController, ListDataProvider, A
         //
         let textPlaceholder = ListCellData<TextPlaceholderTableViewCell>(configuration: { (cell, item) in
             cell.left.text = "placeholder"
-            cell.placeholder.text = "please select"
+            cell.placeholder.text = "please selectplease selectplease selectplease selectplease select"
 //            cell.set(value: "placeholder")
         }, selection: nil, height: nil)
         self.items.append(textPlaceholder)
@@ -65,8 +65,8 @@ class MultipeerTableViewController: BaseTableViewController, ListDataProvider, A
         //
         let textPlaceholderValue = ListCellData<TextPlaceholderTableViewCell>(configuration: { (cell, item) in
             cell.left.text = "placeholder"
-            cell.placeholder.text = "please select"
-            cell.set(value: "value")
+            cell.placeholder.text = "please selectplease selectplease selectplease selectplease select"
+            cell.set(value: "valuevaluevaluevaluevaluevaluevaluevaluevaluevaluevaluevaluevaluevalue")
         }, selection: nil, height: nil)
         self.items.append(textPlaceholderValue)
         

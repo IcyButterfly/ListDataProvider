@@ -33,6 +33,7 @@ class TextPlaceholderTableViewCell: LDPTableViewCell {
         self.contentView.addSubview(self.placeholder)
         self.contentView.addSubview(self.value)
         
+        self.placeholder.textAlignment = .right
         self.value.textAlignment = .right
         self.placeholder.textColor = UIColor.lightGray
         
@@ -56,18 +57,18 @@ class TextPlaceholderTableViewCell: LDPTableViewCell {
         arrowFrame.origin.y = (frame.height - arrowFrame.height)/2.0
         self.arrow.frame = arrowFrame
         
-        self.placeholder.sizeToFit()
-        var placeholderFrame = self.placeholder.frame
-        placeholderFrame.origin.x = arrowFrame.maxX - arrowFrame.width - placeholderFrame.width - 5/*placeholder-arrow*/
-        placeholderFrame.origin.y = (self.frame.height - placeholderFrame.height)/2.0
-        self.placeholder.frame = placeholderFrame
+//        self.placeholder.sizeToFit()
+//        var placeholderFrame = self.placeholder.frame
+//        placeholderFrame.origin.x = arrowFrame.maxX - arrowFrame.width - placeholderFrame.width - 5/*placeholder-arrow*/
+//        placeholderFrame.origin.y = (self.frame.height - placeholderFrame.height)/2.0
+//        self.placeholder.frame = placeholderFrame
         
         var valueFrame = self.value.frame
         valueFrame.origin.x = self.left.frame.maxX + self.rightEdge
         valueFrame.origin.y = 0//(self.frame.height - valueFrame.height)/2.0
-        valueFrame.size.width = self.frame.width - self.left.frame.maxX - self.rightEdge * 2 - arrowFrame.width - 5
+        valueFrame.size.width = self.frame.width - self.left.frame.maxX - self.rightEdge * 2 - arrowFrame.width - 5/*placeholder-arrow*/
         valueFrame.size.height = self.frame.height
         self.value.frame = valueFrame
-        
+        self.placeholder.frame = valueFrame
     }
 }
