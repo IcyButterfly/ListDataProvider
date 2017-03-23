@@ -11,7 +11,7 @@ import UIKit
 class TextCheckTableViewCell: LDPTableViewCell {
 
     @IBOutlet var check: UIImageView!
-    @IBInspectable var textLeft: CGFloat = 15
+    @IBInspectable var textLeft: CGFloat = LDPTableViewCell.defaultLeftEdge
     @IBInspectable var checkRight: CGFloat = 15
     
     override func setup() {

@@ -10,7 +10,7 @@ import UIKit
 
 class BaseTableViewController: UIViewController {
     
-    var tableView = UITableView()
+    var tableView = UITableView(frame: .zero, style: .grouped)
 
     override func viewDidLoad() {
         super.viewDidLoad()

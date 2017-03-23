@@ -20,6 +20,10 @@ class MultipeerTableViewProxy<T: ListDataProvider>: NSObject, UITableViewDataSou
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let data = self.dataProvider.dataAt(indexPath: indexPath)
         let cell = tableView.dequeueReusableCell(withIdentifier: data.identifier)
+        
+        if let cell = cell {
+            data.build(tableCell: cell, at: indexPath)
+        }
         return cell!
     }
 

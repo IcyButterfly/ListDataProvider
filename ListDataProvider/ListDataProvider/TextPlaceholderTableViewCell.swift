@@ -15,7 +15,7 @@ class TextPlaceholderTableViewCell: LDPTableViewCell {
     lazy var left  = UILabel()
     @IBOutlet var arrow: UIImageView!
 
-    @IBInspectable var leftEdge: CGFloat = 15
+    @IBInspectable var leftEdge: CGFloat = LDPTableViewCell.defaultLeftEdge
     @IBInspectable var rightEdge: CGFloat = 15
 
     func set(value: String?) {
