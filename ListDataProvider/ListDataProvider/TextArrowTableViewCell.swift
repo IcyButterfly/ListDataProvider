@@ -18,7 +18,7 @@ class TextArrowTableViewCell: LDPTableViewCell {
     override func setup() {
         
         if self.arrow == nil {
-            self.arrow = UIImageView(image: UIImage(named: "arrow_right"))
+            self.arrow = UIImageView(image: UIImage(named: "ListDataProvider.bundle/list_right_arrow"))
             self.contentView.addSubview(self.arrow)
         }
     }
@@ -34,6 +34,7 @@ class TextArrowTableViewCell: LDPTableViewCell {
             }
         }
         
+        arrow.sizeToFit()
         var arrowFrame = arrow.frame
         arrowFrame.origin.x = frame.width - arrowRight - arrowFrame.width
         arrowFrame.origin.y = (frame.height - arrowFrame.height)/2.0

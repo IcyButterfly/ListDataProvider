@@ -38,6 +38,6 @@ class ImageTextArrowTableViewCell: LDPTableViewCell {
     
     override func setup() {
         self.contentView.addSubview(self.arrow)
-        self.imageView?.image = UIImage(named: "arrow_right")
+//        self.imageView?.image = UIImage(named: "arrow_right")
     }
 }

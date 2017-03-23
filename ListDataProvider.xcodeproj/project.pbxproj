@@ -36,6 +36,7 @@
 		D476F20E1E486F44006F6C48 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476F2051E486F44006F6C48 /* ReusableView.swift */; };
 		D476F2101E486F44006F6C48 /* MultipeerTableViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476F2071E486F44006F6C48 /* MultipeerTableViewProxy.swift */; };
 		D476F2111E486F44006F6C48 /* UITableView+BIDequeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476F2081E486F44006F6C48 /* UITableView+BIDequeCell.swift */; };
+		D494812A1E837C860094E98D /* ListDataProvider.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D49481291E837C860094E98D /* ListDataProvider.bundle */; };
 		D49F10661E76A2DC00578FE8 /* ListCellModelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49F10651E76A2DC00578FE8 /* ListCellModelProvider.swift */; };
 		D49F10681E76A32900578FE8 /* ArrayContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49F10671E76A32900578FE8 /* ArrayContainer.swift */; };
 		D4CE9CE41E77D47500A0C0DE /* ListDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CE9CE31E77D47500A0C0DE /* ListDataProviderTests.swift */; };
@@ -89,6 +90,7 @@
 		D476F2051E486F44006F6C48 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		D476F2071E486F44006F6C48 /* MultipeerTableViewProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerTableViewProxy.swift; sourceTree = "<group>"; };
 		D476F2081E486F44006F6C48 /* UITableView+BIDequeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+BIDequeCell.swift"; sourceTree = "<group>"; };
+		D49481291E837C860094E98D /* ListDataProvider.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ListDataProvider.bundle; sourceTree = "<group>"; };
 		D49F10651E76A2DC00578FE8 /* ListCellModelProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCellModelProvider.swift; sourceTree = "<group>"; };
 		D49F10671E76A32900578FE8 /* ArrayContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayContainer.swift; sourceTree = "<group>"; };
 		D4CE9CE11E77D47500A0C0DE /* ListDataProviderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListDataProviderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -238,6 +240,7 @@
 		D4FE13241D8E535F00CD286D /* ListDataProvider */ = {
 			isa = PBXGroup;
 			children = (
+				D49481291E837C860094E98D /* ListDataProvider.bundle */,
 				D49F106B1E76A3DE00578FE8 /* DataProvider */,
 				D49F106A1E76A3D700578FE8 /* DataContainer */,
 				D49F10691E76A3C300578FE8 /* ListProxy */,
@@ -340,6 +343,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D494812A1E837C860094E98D /* ListDataProvider.bundle in Resources */,
 				45099E221D7ADD8800899CBF /* LaunchScreen.storyboard in Resources */,
 				45099E1F1D7ADD8800899CBF /* Assets.xcassets in Resources */,
 				45099E1D1D7ADD8800899CBF /* Main.storyboard in Resources */,

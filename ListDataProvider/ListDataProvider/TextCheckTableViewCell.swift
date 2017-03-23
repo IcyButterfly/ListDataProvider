@@ -16,7 +16,9 @@ class TextCheckTableViewCell: LDPTableViewCell {
     
     override func setup() {
         if self.check != nil { return }
-        self.check = UIImageView(image: UIImage(named: "check"))
+    
+        let image = UIImage(named: "ListDataProvider.bundle/list_right_check")
+        self.check = UIImageView(image: image)
         self.contentView.addSubview(self.check)
     }
     
@@ -31,6 +33,7 @@ class TextCheckTableViewCell: LDPTableViewCell {
             }
         }
         
+        check.sizeToFit()
         var checkFrame = check.frame
         checkFrame.origin.x = frame.width - checkRight - checkFrame.width
         checkFrame.origin.y = (frame.height - checkFrame.height)/2.0
