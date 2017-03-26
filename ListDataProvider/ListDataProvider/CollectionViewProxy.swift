@@ -8,7 +8,9 @@
 
 import UIKit
 
-class CollectionViewProxy<DataProvider: ListDataProvider, Cell:UICollectionViewCell>: NSObject , UICollectionViewDataSource where  Cell: ReusableViewBinder, DataProvider.Data == Cell.ViewModel{
+class CollectionViewProxy<DataProvider: ListDataProvider, Cell:UICollectionViewCell>: NSObject , UICollectionViewDataSource
+
+where DataProvider: ListCellViewModelProvider, Cell: ReusableViewBinder, DataProvider.CellModel == Cell.ViewModel{
     
     private var dataProvider: DataProvider
     private var identifier: String
@@ -30,7 +32,7 @@ class CollectionViewProxy<DataProvider: ListDataProvider, Cell:UICollectionViewC
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.identifier, for: indexPath)
         let actualCell = cell as! Cell
-        actualCell.bindWith(self.dataProvider.dataAt(indexPath: indexPath))
+        actualCell.bindWith(self.dataProvider.viewModel(at: indexPath))
         return actualCell
     }
 }

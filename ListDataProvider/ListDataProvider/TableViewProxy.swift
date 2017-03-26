@@ -16,7 +16,7 @@ protocol TableViewCellIdentifierDelegate {
 }
 
 public class TableViewProxy<DataProvider: ListDataProvider, Cell:UITableViewCell>: NSObject , UITableViewDataSource, UITableViewDelegate
-where  Cell: ReusableViewBinder, DataProvider.CellViewModel == Cell.ViewModel, DataProvider: ListCellViewModelProvider{
+where  Cell: ReusableViewBinder, DataProvider: ListCellViewModelProvider, Cell.ViewModel == DataProvider.CellModel {
     
     public typealias ItemSelect = ((DataProvider.Data, IndexPath) -> Void)
     
@@ -57,7 +57,7 @@ where  Cell: ReusableViewBinder, DataProvider.CellViewModel == Cell.ViewModel, D
             cellIdentifier = identifierDelegate.identifierForCellAt(indexPath: indexPath)
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! Cell
-        cell.bindWith(self.dataProvider.viewModelAt(indexPath: indexPath))
+        cell.bindWith(self.dataProvider.viewModel(at: indexPath))
         
         return cell
     }
