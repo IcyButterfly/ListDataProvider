@@ -13,9 +13,14 @@ public protocol PagedListDataProvider: ListDataProvider {
     var hasMore: Bool { get set }
 }
 
+struct PagedListDataProviderDefault {
+    static var pageIndex: Int = 1
+    static var pageSize:  Int = 10
+}
 
 extension PagedListDataProvider where Self: ArrayContainer{
     
+
     public func isEmpty() -> Bool {
         return self.items.count == 0
     }
@@ -29,7 +34,9 @@ extension PagedListDataProvider where Self: ArrayContainer{
     /// - Returns: more true:  加载更多的页数
     ///                 false: 刷新时的页数
     
-    public func pageIndex(withPageCount count: Int, isRequestMore more: Bool, startIndex: Int = 1) -> Int{
+    public func pageIndex(withPageCount count: Int = PagedListDataProviderDefault.pageSize,
+                          isRequestMore more: Bool,
+                          startIndex: Int = PagedListDataProviderDefault.pageIndex) -> Int{
         if more == false{
             return startIndex
         }
@@ -44,7 +51,9 @@ extension PagedListDataProvider where Self: ArrayContainer{
     ///     contentsOf的count为1  则可以判断没有更多了
     ///     contentsOf的count为10 则可能是还有更多 也可能是没有更多了，此时 本方法判断结果为还有更多
     ///                          此时如果服务器并未给出是否还有更多的字段，则可以通过再获取一页来判断,直到获取到的数量小于10 就没有更多了
-    public func append(contentsOf: [Data], isRequestMore more: Bool, pageCount: Int) {
+    public func append(contentsOf: [Data],
+                       isRequestMore more: Bool,
+                       pageCount: Int = PagedListDataProviderDefault.pageSize) {
         
         if more == false {
             self.items.removeAll()

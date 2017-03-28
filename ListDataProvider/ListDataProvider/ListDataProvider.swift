@@ -16,5 +16,9 @@ public protocol ListDataProvider: class {
     func sectionCount() -> Int
     func rowCountAt(section: Int) -> Int
     func dataAt(indexPath: IndexPath) -> Data
+}
 
+public protocol ListCellViewModelProvider: class {
+    associatedtype CellModel
+    func viewModel(at indexPath: IndexPath) -> CellModel
 }

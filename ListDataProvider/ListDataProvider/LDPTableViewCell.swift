@@ -19,7 +19,6 @@ class LDPTableViewCell: UITableViewCell {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setup()
     }
     
     override func awakeFromNib() {

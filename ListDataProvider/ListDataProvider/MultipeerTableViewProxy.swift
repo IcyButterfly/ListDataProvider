@@ -20,7 +20,7 @@ class MultipeerTableViewProxy<T: ListDataProvider>: NSObject, UITableViewDataSou
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let data = self.dataProvider.dataAt(indexPath: indexPath)
         let cell = tableView.dequeueReusableCell(withIdentifier: data.identifier)
-        
+
         if let cell = cell {
             data.build(tableCell: cell, at: indexPath)
         }
@@ -42,4 +42,21 @@ class MultipeerTableViewProxy<T: ListDataProvider>: NSObject, UITableViewDataSou
         data.select(indexPath: indexPath)
     }
     
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        let data = self.dataProvider.dataAt(indexPath: indexPath)
+        
+        if let height = data.cellHeight {
+            return height
+        }
+        return tableView.rowHeight
+    }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        let data = self.dataProvider.dataAt(indexPath: indexPath)
+//        
+//        if let height = data.cellHeight {
+//            return height
+//        }
+//        return tableView.rowHeight
+//    }
 }
