@@ -48,7 +48,7 @@ where  Cell: ReusableViewBinder, DataProvider: ListCellViewModelProvider, Cell.V
 
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.dataProvider.rowCountAt(section: section)
+        return self.dataProvider.rowCount(at: section)
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -69,7 +69,7 @@ where  Cell: ReusableViewBinder, DataProvider: ListCellViewModelProvider, Cell.V
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let select = self.selectAction {
-            let data = self.dataProvider.dataAt(indexPath: indexPath)
+            let data = self.dataProvider.data(at: indexPath)
             select(data, indexPath)
         }
     }

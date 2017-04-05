@@ -26,7 +26,7 @@ where DataProvider: ListCellViewModelProvider, Cell: ReusableViewBinder, DataPro
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.dataProvider.rowCountAt(section: section)
+        return self.dataProvider.rowCount(at: section)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

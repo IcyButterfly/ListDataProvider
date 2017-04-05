@@ -38,7 +38,7 @@ class TextPlaceholderTableViewCell: LDPTableViewCell {
         self.placeholder.textColor = UIColor.lightGray
         
         if self.arrow == nil {
-            self.arrow = UIImageView(image: UIImage(named: "arrow_right"))
+            self.arrow = UIImageView(image: UIImage(named: "ListDataProvider.bundle/list_right_arrow.png"))
             self.contentView.addSubview(self.arrow)
         }
     }
