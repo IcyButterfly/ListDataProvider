@@ -31,7 +31,7 @@ where  Cell: ReusableViewBinder, DataProvider: ListCellViewModelProvider, Cell.V
         print("TableViewProxy deinit")
     }
     
-    init(identifier: String = "cell", cacheHeight: Bool = false, listDataProvider: DataProvider){
+    init(identifier: String = String(describing: Cell.self), cacheHeight: Bool = false, listDataProvider: DataProvider){
         self.identifier   = identifier
         self.cacheHeight  = cacheHeight
         self.dataProvider = listDataProvider
