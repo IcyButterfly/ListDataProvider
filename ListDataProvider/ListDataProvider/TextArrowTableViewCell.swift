@@ -12,7 +12,7 @@ class TextArrowTableViewCell: LDPTableViewCell {
     
     @IBOutlet var arrow: UIImageView!
     
-    @IBInspectable var textLeft: CGFloat = 15
+    @IBInspectable var textLeft: CGFloat = LDPTableViewCell.defaultLeftEdge
     @IBInspectable var arrowRight: CGFloat = 15
 
     override func setup() {

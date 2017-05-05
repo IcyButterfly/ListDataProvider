@@ -9,6 +9,8 @@
 import UIKit
 
 class LDPTableViewCell: UITableViewCell {
+    
+    static var defaultLeftEdge: CGFloat = 15
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

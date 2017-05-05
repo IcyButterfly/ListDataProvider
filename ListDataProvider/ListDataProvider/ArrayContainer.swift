@@ -39,11 +39,11 @@ public extension ArrayContainer where Self: ListDataProvider{
         return self.items.count > 0 ? 1 : 0
     }
     
-    public func rowCountAt(section: Int) -> Int{
+    public func rowCount(at section: Int) -> Int{
         return self.items.count
     }
     
-    public func dataAt(indexPath: IndexPath) -> Data{
+    public func data(at indexPath: IndexPath) -> Data{
         return self.items[indexPath.row]
     }
 }
@@ -53,11 +53,11 @@ extension ArrayContainer where Self: ListDataProvider, Self: Sectioned {
         return self.items.count
     }
     
-    public func rowCountAt(section: Int) -> Int{
+    public func rowCount(at section: Int) -> Int{
         return 1
     }
     
-    public func dataAt(indexPath: IndexPath) -> Data{
+    public func data(at indexPath: IndexPath) -> Data{
         return self.items[indexPath.section]
     }
 }

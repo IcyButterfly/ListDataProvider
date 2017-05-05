@@ -15,7 +15,7 @@ class TextPlaceholderTableViewCell: LDPTableViewCell {
     lazy var left  = UILabel()
     @IBOutlet var arrow: UIImageView!
 
-    @IBInspectable var leftEdge: CGFloat = 15
+    @IBInspectable var leftEdge: CGFloat = LDPTableViewCell.defaultLeftEdge
     @IBInspectable var rightEdge: CGFloat = 15
 
     func set(value: String?) {
@@ -38,7 +38,9 @@ class TextPlaceholderTableViewCell: LDPTableViewCell {
         self.placeholder.textColor = UIColor.lightGray
         
         if self.arrow == nil {
-            self.arrow = UIImageView(image: UIImage(named: "ListDataProvider.bundle/list_right_arrow"))
+
+            self.arrow = UIImageView(image: UIImage(named: "ListDataProvider.bundle/list_right_arrow.png"))
+
             self.contentView.addSubview(self.arrow)
         }
     }

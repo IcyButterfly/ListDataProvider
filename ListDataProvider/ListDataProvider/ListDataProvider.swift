@@ -14,8 +14,8 @@ public protocol ListDataProvider: class {
     associatedtype Data
     
     func sectionCount() -> Int
-    func rowCountAt(section: Int) -> Int
-    func dataAt(indexPath: IndexPath) -> Data
+    func rowCount(at section: Int) -> Int
+    func data(at indexPath: IndexPath) -> Data
 }
 
 public protocol ListCellViewModelProvider: class {

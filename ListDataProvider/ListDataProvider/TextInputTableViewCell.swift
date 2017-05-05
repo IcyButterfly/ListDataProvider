@@ -10,7 +10,7 @@ import UIKit
 
 class TextInputTableViewCell: LDPTableViewCell {
     
-    @IBInspectable var leftEdge: CGFloat = 15
+    @IBInspectable var leftEdge: CGFloat = LDPTableViewCell.defaultLeftEdge
     @IBInspectable var rightEdge: CGFloat = 15
     @IBOutlet var inputField: UITextField!
     
@@ -28,7 +28,6 @@ class TextInputTableViewCell: LDPTableViewCell {
             frame.origin.x = self.leftEdge
             self.textLabel?.frame = frame
         }
-        
         
         if let size = self.textLabel?.sizeThatFits(self.frame.size) {
             var frame = self.inputField.frame

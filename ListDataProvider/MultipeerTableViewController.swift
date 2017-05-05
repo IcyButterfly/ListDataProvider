@@ -84,6 +84,7 @@ class MultipeerTableViewController: BaseTableViewController, ListDataProvider, A
         
         self.tableView.dataSource = self
         self.tableView.delegate   = self
+        self.tableView.register(PlainTextHeaderFooterView.self, forHeaderFooterViewReuseIdentifier: "header")
     }
 
 }
@@ -100,10 +101,23 @@ extension MultipeerTableViewController: UITableViewDataSource {
         item.build(tableCell: cell, at: indexPath)
         return cell
     }
+    
+
 }
 
 extension MultipeerTableViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "header")
+        header?.textLabel?.text = "hello"
+        header?.contentView.backgroundColor = UIColor.white
+        return header
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 44
     }
 }

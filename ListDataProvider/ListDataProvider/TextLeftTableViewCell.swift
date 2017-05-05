@@ -10,7 +10,7 @@ import UIKit
 
 class TextLeftTableViewCell: LDPTableViewCell {
 
-    @IBInspectable var leftEdge: CGFloat = 15
+    @IBInspectable var leftEdge: CGFloat = LDPTableViewCell.defaultLeftEdge
     
     override func layoutSubviews() {
         super.layoutSubviews()
